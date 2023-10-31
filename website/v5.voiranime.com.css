@@ -1,0 +1,61 @@
+/*      Made by Sleezzi
+    Copyright © Sleezzi - 2022 - All right reserved
+    website: sleezzi.github.io
+    discord: https://discord.gg/kzpUQaNqyV
+ */
+
+body, .profile-manga, .extend, .pages, .current, .previouspostslink, .nextpostslink {
+  background: #333;
+}
+
+body, .profile-manga, #menu-item-916 a, .url, .h5 a, .h4, .wp-manga-chapter a, .post-title h1, .post-content_item div h5, .comment-content p, .comment-author * {
+  color: white !important;
+}
+
+.ion-checkmark, .c-selectpicker.selectpicker_chapter.selectpicker.single-chapter-select, .selectpicker.host-select {
+  filter: invert() !important;
+}
+
+.summary_image, .summary_content, #comment, #author, #email, #url {
+  border-radius: 5px;
+  border: #444 solid 2px;
+  background: #555 !important;
+}
+
+#comment:hover, #author:hover, #email:hover, #url:hover {
+  border-radius: 5px;
+  border: #555 solid 2px;
+  background: #666 !important;
+}
+
+.jw-icon-settings:hover .jw-svg-icon-settings {
+  transform: rotate(360deg);
+  transition: all 0.3s;
+}
+
+.chapter-video-content-validator form p .btn[type=submit][disabled] {
+  background: red !important;
+}
+
+.chapter-video-content-validator form p .btn[type=submit] {
+  background: green !important;
+  transition: all 0.5s;
+}
+
+.block.block-left:hover {
+  border: 2px solid gray;
+  transition: all 0.1s;
+}
+
+#manga-discussion > h4, .wp-pagenavi *{
+  color: gray !important;
+}
+
+.c-tabs-content > .active > a::after {
+  background: black !important;
+}
+
+span.current[aria-current=page], .previouspostslink, .nextpostslink {
+  color: white !important;
+  font-weight: 1000;
+}
