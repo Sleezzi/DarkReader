@@ -11,7 +11,11 @@ body, #main, .main {
     font-family: 'Noto Sans JP', 'sans-serif' !important;
 }
 
-.emptyscreen-header, .trash.horizontal-spacing::before, .trash.horizontal-spacing .bottom-border .no-style.ng-scope, .chip-input.right-magnet.ng-valid.ng-dirty.ng-touched.ng-not-empty.ng-valid-parse.move, .ten.cell.twelve-mobile.ng-valid.ng-not-empty.ng-dirty.ng-valid-parse.ng-touched, h2 i18n .no-style.ng-scope, .welcome-text.ng-scope .row .twelve.cell.ng-isolate-scope .ng-scope .ng-scope .ng-scope p span {
+.paragraph-default > .live-articles, .block-magazine, .block-magazine, .paragraph-video, .paragraph-access-banner, .paragraph-default:nth-child(3) > .live-articles {
+    background: transparent !important;
+}
+
+li > button:before, .slick-active > button:before, .block-magazine__title, .block-magazine__text > p, .block-magazine__meta > .meta-data-item, .meta-data-item > *, .block-video > h3, .block-chart__legend > p, .block-chart__name, .block-chart__legends > *, .block-chart__name, .paragraph-default h2, div#block-cridf-front-content > section.home-page-banner > div > *, .emptyscreen-header, .trash.horizontal-spacing::before, .trash.horizontal-spacing .bottom-border .no-style.ng-scope, .chip-input.right-magnet.ng-valid.ng-dirty.ng-touched.ng-not-empty.ng-valid-parse.move, .ten.cell.twelve-mobile.ng-valid.ng-not-empty.ng-dirty.ng-valid-parse.ng-touched, h2 i18n .no-style.ng-scope, .welcome-text.ng-scope .row .twelve.cell.ng-isolate-scope .ng-scope .ng-scope .ng-scope p span {
     color: white !important;
 }
 
