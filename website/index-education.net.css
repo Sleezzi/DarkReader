@@ -3,11 +3,6 @@
     website: sleezzi.github.io
     discord: https://discord.gg/kzpUQaNqyV
  */
-
-.ibe_util_photo.ibe_actif, .photo-contain {
-    background: var(--profile-icon) var(--profile-icon-position)/var(--profile-icon-size) no-repeat;
-    border: 2px solid gray;
-}
   
   
 .ObjetBandeauEspace .ibe_centre .ibe_util_photo.ibe_actif:hover, .ObjetBandeauEspace .ibe_centre .ibe_util_photo.ibe_actif:focus {
@@ -18,16 +13,9 @@
 .bloc-identite .photo-contain:hover {
     background-size: calc(cover + 10px) !important;
     transition: all 5s;
-}
-  
-  
-.widget.theme-cat-communication.actualites.collapsible, .ibe_util_photo.ibe_actif > img, .photo-contain > img, .ibe_image_etab img {
-    display: none !important;
-}
-  
+}  
   
 .ibe_image_etab {
-    background: var(--school-icon) var(--school-icon-position)/var(--school-icon-size) no-repeat;
     border-radius: 5px;
     display: flex;
     height: 35px;
@@ -68,15 +56,15 @@
 }
   
 #GInterface_T, .AffichagePageAccueil.dotty.eleve, .widgets-global-containerm, .AlignementHaut.Espace {
-    background: var(--background) !important;
+    background: #333 !important;
 }
   
 .message-conteneur span, #id_376, #id_356, #id_331, #id_275, #id_248, #id_201, #id_164, .Gras.AlignementMilieu.GrandEspaceHaut, #id_125, #id_415, #id_221, .AlignementDroit.PetitEspaceDroit, .NoWrap.titre-entete, .AlignementMilieu.Insecable.Maigre div {
-    color: var(--main-color) !important;
+    color: white !important;
 }
 
 .ocb_cont.as-input.as-date-picker div, .ie-ellipsis {
-    color: var(--second-color);
+    color: black;
 }
   
 .Fenetre_Bordure.ConteneurFiches, .listitem, .ObjetCelluleDate.input-wrapper i {
@@ -93,7 +81,7 @@
   
 .ObjetBandeauEspace {
     background: linear-gradient(var(--background), var(--background), black);
-    color: var(--main-color);
+    color: white;
 }
   
 .icon_off.colorFoncee {
@@ -105,17 +93,17 @@
 }
   
 .as-button.bt-widget.icon.icon_affichage_widget {
-    color: var(--main-color);
+    color: white;
     border: 1px solid white;
 }
   
 .liste_contenu_ligne, .SansMain.liste_fixed div, .zone-principale > h4 {
     background: white !important;
-    color: var(--second-color) !important;
+    color: black !important;
 }
  
 .as-button.bt-widget.icon.icon_affichage_widget:hover {
-    color: var(--second-color) !important;
+    color: black !important;
     border: 1px solid black;
     transition: 0.8s all;
 }
@@ -131,7 +119,7 @@
 }
   
 .liste_contenu_cellule_contenu, .zone-principale h4, .Gras.InlineBlock.PetitEspaceHaut.PetitEspaceBas.EspaceDroit.EspaceGauche10 {
-    color: var(--main-color);
+    color: white;
     background: #555;
     border-radius: 5px;
 }
