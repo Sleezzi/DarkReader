@@ -4,17 +4,30 @@
     discord: https://discord.gg/kzpUQaNqyV
  */
   
-  
-.ObjetBandeauEspace .ibe_centre .ibe_util_photo.ibe_actif:hover, .ObjetBandeauEspace .ibe_centre .ibe_util_photo.ibe_actif:focus {
-    border-width: 1px;
+div#conteneur-page > div > div, div.fluid-bloc.conteneur-droite.p-left.conteneur-liste-CDT, .liste-date, div.conteneur-ressourcePeda, div.SansMain.liste_fixed.liste-focus-grid div, div.ObjetListe.skin_flatDesign.ombre-droite.DonneesListe_RubriqueDocuments.background-selec, .SansMain.liste_fixed.liste-focus-grid, .liste_celluleGrid.fd_ligne.fd-design-minimal.with-select *, h5.fd-style-intertitre, #undefined_0, #undefined_1, #GInterface_T, .AffichagePageAccueil.dotty.eleve, .widgets-global-containerm, .AlignementHaut.Espace {
+    background: #333 !important;
 }
   
-  
-.bloc-identite .photo-contain:hover {
-    background-size: calc(cover + 10px) !important;
-    transition: all 5s;
+.ie-titre-petit, .ie-sous-titre, .chips-pj > a > div, .chips-pj > a, .ie-titre-gros, .liste-date, div.SansMain.liste_fixed.liste-focus-grid div, .small-bt:hover > div > div , .ieBoutonIcon.icon_qr_code:before, .small-bt, .ObjetBandeauEspace, .as-button.bt-widget.icon.icon_affichage_widget, div.zone-principale > h4, .item-contain:before, .item-conteneur > h4, div[role="note"] > p, .ie-titre-couleur-lowercase, .ie-titre, .ie-texte, .details-notes > span, .message-conteneur span, #id_376, #id_356, #id_331, #id_275, #id_248, #id_201, #id_164, .Gras.AlignementMilieu.GrandEspaceHaut, #id_125, #id_415, #id_221, .AlignementDroit.PetitEspaceDroit, .NoWrap.titre-entete, .AlignementMilieu.Insecable.Maigre div {
+    color: white !important;
+}
+
+.liste_contenu_ligne, .SansMain.liste_fixed div, .zone-principale > h4, .as-button.bt-widget.icon.icon_affichage_widget:hover, .ocb_cont.as-input.as-date-picker div, .ie-ellipsis {
+    color: black !important;
 }  
-  
+
+ .ObjetBandeauEspace .ibe_centre .ibe_util_photo.ibe_actif:hover, .ObjetBandeauEspace .ibe_centre .ibe_util_photo.ibe_actif:focus {
+    border-width: 1px;
+}
+
+.liste_celluleGrid {
+  padding: 0 !important;
+}
+
+.chips-pj > a, .Fenetre_Bordure.ConteneurFiches, .listitem, .ObjetCelluleDate.input-wrapper i {
+  background: #555 !important;
+}
+
 .ibe_image_etab {
     border-radius: 5px;
     display: flex;
@@ -22,7 +35,6 @@
     width: 35px;
     margin-left: 5px;
 }
-  
   
 .ibe_image_etab:hover {
     height: 37px;
@@ -55,20 +67,7 @@
     transition: all 0.3s;
 }
   
-#GInterface_T, .AffichagePageAccueil.dotty.eleve, .widgets-global-containerm, .AlignementHaut.Espace {
-    background: #333 !important;
-}
-  
-.message-conteneur span, #id_376, #id_356, #id_331, #id_275, #id_248, #id_201, #id_164, .Gras.AlignementMilieu.GrandEspaceHaut, #id_125, #id_415, #id_221, .AlignementDroit.PetitEspaceDroit, .NoWrap.titre-entete, .AlignementMilieu.Insecable.Maigre div {
-    color: white !important;
-}
-
-.ocb_cont.as-input.as-date-picker div, .ie-ellipsis {
-    color: black;
-}
-  
 .Fenetre_Bordure.ConteneurFiches, .listitem, .ObjetCelluleDate.input-wrapper i {
-    background: #555 !important;
     border-radius: 2px;
     border: 2px solid #444;
 }
@@ -81,7 +80,6 @@
   
 .ObjetBandeauEspace {
     background: linear-gradient(var(--background), var(--background), black);
-    color: white;
 }
   
 .icon_off.colorFoncee {
@@ -93,17 +91,14 @@
 }
   
 .as-button.bt-widget.icon.icon_affichage_widget {
-    color: white;
     border: 1px solid white;
 }
   
 .liste_contenu_ligne, .SansMain.liste_fixed div, .zone-principale > h4 {
     background: white !important;
-    color: black !important;
 }
  
 .as-button.bt-widget.icon.icon_affichage_widget:hover {
-    color: black !important;
     border: 1px solid black;
     transition: 0.8s all;
 }
@@ -119,7 +114,6 @@
 }
   
 .liste_contenu_cellule_contenu, .zone-principale h4, .Gras.InlineBlock.PetitEspaceHaut.PetitEspaceBas.EspaceDroit.EspaceGauche10 {
-    color: white;
     background: #555;
     border-radius: 5px;
 }
