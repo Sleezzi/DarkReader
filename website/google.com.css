@@ -4,11 +4,18 @@
     discord: https://discord.gg/kzpUQaNqyV
  */
 
-body {
+body, #cnt {
     background: #333;
     color: white;
 }
 
-#gb, div[role="contentinfo"] {
+#gb, div[role="contentinfo"], .sfbg, #appbar, .MjjYud > div {
     background: transparent !important;
 }
+
+.k8XOCe, .RNNXgb {
+    transition: background 0.3s;
+  }
+  .k8XOCe:hover, .RNNXgb:hover {
+      background: #555;
+  }
