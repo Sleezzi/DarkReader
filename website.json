@@ -1,0 +1,23 @@
+{
+    "index-education.net": {
+        "name": "Pronote",
+        "description": "\"Pronote is school life management software created in 1999 by Index Education, and used in more than 10 000 middle and high schools according to the company.\nIt is initially a thick client, but since 2003 there has been an extension allowing it to be used as a web application: Pronote.net.\"",
+        "website": "index-education.net",
+        "styleURL": "https://sleezzi.github.io/DarkReader/website/index-education.net.css",
+        "author": "Sleezzi"
+    },
+    "iledefrance.fr": {
+        "name": "ENT Ile de France",
+        "description": "\"Un espace numérique de travail (ENT) désigne un ensemble intégré de services numériques choisis et mis à disposition de tous les acteurs de la communauté éducative d'une ou plusieurs écoles ou d'un ou plusieurs établissements scolaires.\"",
+        "website": "iledefrance.fr",
+        "styleURL": "https://sleezzi.github.io/DarkReader/website/iledefrance.fr.css",
+        "author": "Sleezzi"
+    },
+    "voiranime.com": {
+        "name": "VoirAnime",
+        "description": "\"Regarder gratuitement vos animes en HD sur VOIRANIME.\"",
+        "website": "voiranime.com",
+        "styleURL": "https://sleezzi.github.io/DarkReader/website/voiranime.com.css",
+        "author": "Sleezzi"
+    }
+}
