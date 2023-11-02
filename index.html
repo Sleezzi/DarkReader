@@ -3,9 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sleezzi</title>
+    <title>DarkReader</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background: #333;
+            animation: changeBackground 0.5s;
+        }
+
+        h1 {
+            color: #FFF;
+        }
+
+        p {
+            color: #d8d8d8;
+        }
+
+        #install {
+            background: #0073e6;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        #install:hover {
+            background: #0054a7;
+            transition: background .5s;
+        }
+        @keyframes changeBackground {
+            0% {
+                background: #FFF;
+            }
+            100% {
+                background: #333;
+            }
+        }
+    </style>
 </head>
 <body>
-    <h1>Welcom</h1>
+    <h1>DarkReader</h1>
+    <p>Change web pages to be dark.</p>
+    <a id="install">Comming soon...</a>
 </body>
 </html>
