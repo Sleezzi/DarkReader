@@ -1,0 +1,35 @@
+/*      Made by Sleezzi
+    Copyright © Sleezzi - 2022 - All right reserved
+    website: sleezzi.github.io/DarkReader
+    discord: https://discord.gg/kzpUQaNqyV
+ */
+
+
+body, #main {
+	background: #333 !important;
+	color: white !important;
+}
+
+
+h1, .block-link svg, footer:nth-child(3),
+nav#main-nav > div > div:nth-child(4) > ul:nth-child(1) > li > div > div > ul > li > a,
+nav#main-nav > div > div:nth-child(4) > ul > li > a {
+	color: unset;
+}
+#screenshot, #share, #fullscreen {
+	background: white;
+}
+
+footer:nth-child(3), nav#main-nav, nav#main-nav > div > div:nth-child(4),
+nav#main-nav > div > div:nth-child(4) > ul > li > div,
+nav#main-nav > div > div:nth-child(4) > ul > li > a {
+	background: transparent !important;
+}
+
+label:hover, a:hover, button:hover {
+	color: #AAA;
+}
+
+nav#main-nav > div > div:nth-child(3) > a > img {
+	filter: invert();
+}

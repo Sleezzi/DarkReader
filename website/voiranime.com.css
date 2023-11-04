@@ -1,6 +1,6 @@
 /*      Made by Sleezzi
     Copyright © Sleezzi - 2022 - All right reserved
-    website: sleezzi.github.io
+    website: sleezzi.github.io/DarkReader
     discord: https://discord.gg/kzpUQaNqyV
  */
 
@@ -8,11 +8,13 @@ body, .profile-manga, .extend, .pages, .current, .previouspostslink, .nextpostsl
   background: #333;
 }
 
-body, .profile-manga, #menu-item-916 a, .url, .h5 a, .h4, .wp-manga-chapter a, .post-title h1, .post-content_item div h5, .comment-content p, .comment-author * {
+body, .profile-manga, #menu-item-916 a, .url, .h5 a, .h4, .wp-manga-chapter a,
+.post-title h1, .post-content_item div h5, .comment-content p, .comment-author * {
   color: white !important;
 }
 
-.ion-checkmark, .c-selectpicker.selectpicker_chapter.selectpicker.single-chapter-select, .selectpicker.host-select {
+.ion-checkmark, .c-selectpicker.selectpicker_chapter.selectpicker.single-chapter-select,
+.selectpicker.host-select {
   filter: invert() !important;
 }
 
