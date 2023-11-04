@@ -34,5 +34,11 @@
         "website": "numworks.com",
         "styleURL": "https://sleezzi.github.io/DarkReader/website/numworks.com.css",
         "author": "Sleezzi"
+    },
+    "roblox.com": {
+        "name": "Roblox",
+        "website": "roblox.com",
+        "styleURL": "https://sleezzi.github.io/DarkReader/website/roblox.com.css",
+        "author": "Sleezzi"
     }
 }
