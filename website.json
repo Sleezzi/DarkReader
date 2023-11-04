@@ -28,5 +28,11 @@
         "website": "google.com",
         "styleURL": "https://sleezzi.github.io/DarkReader/website/google.com.css",
         "author": "Sleezzi"
+    },
+    "numworks.com": {
+        "name": "Numworks",
+        "website": "numworks.com",
+        "styleURL": "https://sleezzi.github.io/DarkReader/website/numworks.com.css",
+        "author": "Sleezzi"
     }
 }
