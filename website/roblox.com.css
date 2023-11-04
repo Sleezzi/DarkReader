@@ -1,0 +1,48 @@
+/*      Made by Sleezzi
+    Copyright © Sleezzi - 2022 - All right reserved
+    website: sleezzi.github.io/DarkReader
+    discord: https://discord.gg/kzpUQaNqyV
+ */
+
+ div#modal-dialog > div, body {
+    background: #333 !important;
+    color: white !important;
+}
+
+table.table, .container-header > .btn-secondary-xs, .section-content,
+#groups-configure-vertical-menu, .card-item, #horizontal-tabs,
+.group-wall, .menu-vertical-container > ul.group-cards, .thumbnail-span,
+.modal-body, .section-content-off, .avatar-card > .avatar-card-container,
+#horizontal-tabs > li > a, .stack-row, #footer-container, .input-group-btn,
+#container-main, .content,
+.ng-scope > .btn-secondary-xs.btn-more.see-all-link-icon.ng-binding {
+    background: transparent !important;
+}
+#groups-configure-vertical-menu > li, table.table > tbody td > div > div > *,
+.text-robux-lg, .section-content, .avatar-card > .avatar-card-container,
+.group-description-content-text, .group-shout-body, .font-header-2, .group-rank,
+.date-time-i18n, h1, .users-vote > div span, .section-header > .font-bold,
+.checkbox-label, #horizontal-tabs > li > a > span, .text-robux, .list-item, .text-center,
+.text-name, .game-name, #recommended-games-container, .stack-row, .title,
+.game-stat > *, .game-description, .game-card-friend-info, .rbx-selection-label,
+.btn-secondary-xs, .friend-parent-container, .container-header, .pager, .price-tag,
+.game-calls-to-action, .container-header > h2 > a, .game-card-name, .info-label {
+    color: white !important;
+}
+.container-fluid, .btn-secondary-md, #sort-select, .btn-full-width,
+.PurchaseButton, .btn-more, .btn-control-sm {
+    background: #dadada !important;
+}
+#decline-btn {
+	background: #C30000;
+}
+.btn-common-play-game-lg {
+	background: #1fa130 !important;
+}
+.text-link {
+	color: #1e9bbe !important;
+}
+.menu-vertical-container > ul.group-cards > li:hover,
+.menu-vertical-container > ul.group-cards > li:focus {
+  box-shadow: inset 4px 0 0 0 #FFF !important;
+}
