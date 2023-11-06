@@ -23,12 +23,6 @@
         "styleURL": "https://sleezzi.github.io/DarkReader/website/openai.com.css",
         "author": "Sleezzi"
     },
-    "google.com": {
-        "name": "Google",
-        "website": "google.com",
-        "styleURL": "https://sleezzi.github.io/DarkReader/website/google.com.css",
-        "author": "Sleezzi"
-    },
     "numworks.com": {
         "name": "Numworks",
         "website": "numworks.com",
@@ -39,6 +33,42 @@
         "name": "Roblox",
         "website": "roblox.com",
         "styleURL": "https://sleezzi.github.io/DarkReader/website/roblox.com.css",
+        "author": "Sleezzi"
+    },
+    "google.com": {
+        "name": "Google",
+        "website": "google.com",
+        "styleURL": "https://sleezzi.github.io/DarkReader/website/google.com.css",
+        "author": "Sleezzi"
+    },
+    "google.ru": {
+        "name": "Google",
+        "website": "google.com",
+        "styleURL": "https://sleezzi.github.io/DarkReader/website/google.com.css",
+        "author": "Sleezzi"
+    },
+    "google.fr": {
+        "name": "Google",
+        "website": "google.com",
+        "styleURL": "https://sleezzi.github.io/DarkReader/website/google.com.css",
+        "author": "Sleezzi"
+    },
+    "google.es": {
+        "name": "Google",
+        "website": "google.com",
+        "styleURL": "https://sleezzi.github.io/DarkReader/website/google.com.css",
+        "author": "Sleezzi"
+    },
+    "google.eu": {
+        "name": "Google",
+        "website": "google.com",
+        "styleURL": "https://sleezzi.github.io/DarkReader/website/google.com.css",
+        "author": "Sleezzi"
+    },
+    "google.to": {
+        "name": "Google",
+        "website": "google.com",
+        "styleURL": "https://sleezzi.github.io/DarkReader/website/google.com.css",
         "author": "Sleezzi"
     }
 }
