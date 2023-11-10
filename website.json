@@ -70,5 +70,11 @@
         "website": "google.com",
         "styleURL": "https://sleezzi.github.io/DarkReader/website/google.com.css",
         "author": "Sleezzi"
+    },
+    "youtube.com": {
+        "name": "YouTube",
+        "website": "youtube.com",
+        "styleURL": "https://sleezzi.github.io/DarkReader/website/youtube.com.css",
+        "author": "Sleezzi"
     }
 }
