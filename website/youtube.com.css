@@ -2,6 +2,6 @@ body {
   color: white;
 }
 
-#columns, #body, body {
+#columns, #body, #contents, #dismissible, body {
   background: #333;
 }
