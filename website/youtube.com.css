@@ -1,7 +1,11 @@
-body {
+body, #text, #video-title, .title, #guide-section-title  {
   color: white !important;
 }
 
-#columns, #body, #contents, #dismissible, body {
+#right-arrow-button, #columns, #body, #contents, #dismissible, #container, #chips-content, #guide-inner-content, body {
   background: #333 !important;
+}
+
+#right-arrow:before {
+  background: linear-gradient(to left, #333 20%, rgba(255, 255, 255, 0) 80%);
 }
