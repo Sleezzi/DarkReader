@@ -2,12 +2,15 @@ body, #text, #video-title, .title, #title, #description > #attributed-snippet-te
 #guide-section-title, .count-text, #text > *, .yt-core-attributed-string, #info,
 .yt-core-attributed-string--link-inherit-color, #collapse, #author-text, #expand,
 #items .yt-video-attribute-view-model__title, #content-text, #search,
-.yt-spec-button-shape-next--mono.yt-spec-button-shape-next--tonal {
+.yt-spec-button-shape-next--mono.yt-spec-button-shape-next--tonal,
+#account-name,
+.ytd-multi-page-menu-renderer > #items > .style-scope > #endpoint > .style-scope {
   color: white !important;
 }
 
 #right-arrow-button, #columns, #body, #contents, #dismissible,
-#container, #chips-content, #guide-inner-content, body {
+#container, #chips-content, #guide-inner-content, #shorts-container,
+#header, #watch-while-engagement-panel, .ytd-popup-container, body {
   background: #333 !important;
 }
 
@@ -20,7 +23,7 @@ h1.ytd-watch-metadata > yt-formatted-string.ytd-watch-metadata > a {
   background: linear-gradient(to left, #333 20%, rgba(255, 255, 255, 0) 80%);
 }
 #subtitle, .inline-metadata-item, #vote-count-middle, .yt-simple-endpoint,
-#icon-label, #country-code, #owner-sub-count {
+#icon-label, #country-code, #owner-sub-count, #email {
 	color: #999 !important;
 }
 
