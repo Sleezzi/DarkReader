@@ -3,14 +3,17 @@ body, #text, #video-title, .title, #title, #description > #attributed-snippet-te
 .yt-core-attributed-string--link-inherit-color, #collapse, #author-text, #expand,
 #items .yt-video-attribute-view-model__title, #content-text, #search,
 .yt-spec-button-shape-next--mono.yt-spec-button-shape-next--tonal,
-#account-name,
+#account-name, yt-tab-shape > div, .yt-icon > icon-shape > div,
 .ytd-multi-page-menu-renderer > #items > .style-scope > #endpoint > .style-scope {
   color: white !important;
 }
 
 #right-arrow-button, #columns, #body, #contents, #dismissible,
 #container, #chips-content, #guide-inner-content, #shorts-container,
-#header, #watch-while-engagement-panel, .ytd-popup-container, body {
+#header, #watch-while-engagement-panel, .ytd-popup-container, body,
+yt-button-shape, #tabs-container > #tabs-inner-container, #search-icon-legacy,
+#page-manager > *, #contentContainer > #channel-container > #channel-header,
+ytd-mini-guide-renderer, ytd-mini-guide-renderer > #items > ytd-mini-guide-entry-renderer {
   background: #333 !important;
 }
 
@@ -23,7 +26,8 @@ h1.ytd-watch-metadata > yt-formatted-string.ytd-watch-metadata > a {
   background: linear-gradient(to left, #333 20%, rgba(255, 255, 255, 0) 80%);
 }
 #subtitle, .inline-metadata-item, #vote-count-middle, .yt-simple-endpoint,
-#icon-label, #country-code, #owner-sub-count, #email {
+#icon-label, #country-code, #owner-sub-count, #email, #channel-handle,
+#subscriber-count, #videos-count, #metadata-line, #content, #more-icon {
 	color: #999 !important;
 }
 
