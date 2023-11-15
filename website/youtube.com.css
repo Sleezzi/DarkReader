@@ -1,11 +1,35 @@
-body, #text, #video-title, .title, #guide-section-title  {
+body, #text, #video-title, .title, #title, #description > #attributed-snippet-text,
+#guide-section-title, .count-text, #text > *, .yt-core-attributed-string, #info,
+.yt-core-attributed-string--link-inherit-color, #collapse, #author-text, #expand,
+#items .yt-video-attribute-view-model__title, #content-text, #search,
+.yt-spec-button-shape-next--mono.yt-spec-button-shape-next--tonal {
   color: white !important;
 }
 
-#right-arrow-button, #columns, #body, #contents, #dismissible, #container, #chips-content, #guide-inner-content, body {
+#right-arrow-button, #columns, #body, #contents, #dismissible,
+#container, #chips-content, #guide-inner-content, body {
   background: #333 !important;
+}
+
+.yt-core-attributed-string--link-inherit-color > a,
+h1.ytd-watch-metadata > yt-formatted-string.ytd-watch-metadata > a {
+  color: rgb(6, 95, 212) !important;
 }
 
 #right-arrow:before {
   background: linear-gradient(to left, #333 20%, rgba(255, 255, 255, 0) 80%);
+}
+#subtitle, .inline-metadata-item, #vote-count-middle, .yt-simple-endpoint,
+#icon-label, #country-code, #owner-sub-count {
+	color: #999 !important;
+}
+
+.yt-spec-button-shape-next.yt-spec-button-shape-next--outline.yt-spec-button-shape-next--call-to-action.yt-spec-button-shape-next--size-m {
+  background: #555 !important;
+  color: white !important;
+  transition: all 0.3s
+}
+
+.yt-spec-button-shape-next.yt-spec-button-shape-next--outline.yt-spec-button-shape-next--call-to-action.yt-spec-button-shape-next--size-m:hover {
+  background: #666 !important;
 }
