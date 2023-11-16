@@ -1,4 +1,4 @@
-body, #text, #video-title, .title, #title, #description > #attributed-snippet-text,
+document > body, #text, #video-title, .title, #title, #description > #attributed-snippet-text,
 #guide-section-title, .count-text, #text > *, .yt-core-attributed-string, #info,
 .yt-core-attributed-string--link-inherit-color, #collapse, #author-text, #expand,
 #items .yt-video-attribute-view-model__title, #content-text, #search,
@@ -10,7 +10,7 @@ body, #text, #video-title, .title, #title, #description > #attributed-snippet-te
 
 #right-arrow-button, #columns, #body, #contents, #dismissible,
 #container, #chips-content, #guide-inner-content, #shorts-container,
-#header, #watch-while-engagement-panel, .ytd-popup-container, body,
+#header, #watch-while-engagement-panel, .ytd-popup-container, document > body,
 yt-button-shape, #tabs-container > #tabs-inner-container, #search-icon-legacy,
 #page-manager > *, #contentContainer > #channel-container > #channel-header,
 ytd-mini-guide-renderer, ytd-mini-guide-renderer > #items > ytd-mini-guide-entry-renderer {
