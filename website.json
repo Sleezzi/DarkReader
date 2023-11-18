@@ -2,79 +2,183 @@
     "index-education.net": {
         "name": "Pronote",
         "website": "index-education.net",
-        "styleURL": "https://sleezzi.github.io/DarkReader/website/index-education.net.css",
-        "author": "Sleezzi"
+        "author": "Sleezzi",
+        "style": {
+            "url": "https://sleezzi.github.io/DarkReader/website/index-education.net.css",
+            "background": [ "#333" ],
+            "text": {
+                "default": [ "white" ],
+                "link": "white"
+            }
+        }
     },
     "iledefrance.fr": {
         "name": "ENT - Ile de France",
         "website": "iledefrance.fr",
-        "styleURL": "https://sleezzi.github.io/DarkReader/website/iledefrance.fr.css",
-        "author": "Sleezzi"
+        "author": "Sleezzi",
+        "style": {
+            "url": "https://sleezzi.github.io/DarkReader/website/iledefrance.fr.css",
+            "background": [ "#333" ],
+            "text": {
+                "default": [ "white" ],
+                "link": "white"
+            }
+        }
     },
     "voiranime.com": {
         "name": "VoirAnime",
         "website": "voiranime.com",
-        "styleURL": "https://sleezzi.github.io/DarkReader/website/voiranime.com.css",
-        "author": "Sleezzi"
+        "author": "Sleezzi",
+        "style": {
+            "url": "https://sleezzi.github.io/DarkReader/website/voiranime.com.css",
+            "background": [ "#333" ],
+            "text": {
+                "default": [ "white" ],
+                "link": "white"
+            }
+        }
     },
     "openai.com": {
         "name": "OpenAI",
         "website": "openai.com",
-        "styleURL": "https://sleezzi.github.io/DarkReader/website/openai.com.css",
-        "author": "Sleezzi"
+        "author": "Sleezzi",
+        "style": {
+            "url": "https://sleezzi.github.io/DarkReader/website/openai.com.css",
+            "background": [ "#333" ],
+            "text": {
+                "default": [ "white" ],
+                "link": "white"
+            }
+        }
     },
     "numworks.com": {
         "name": "Numworks",
         "website": "numworks.com",
-        "styleURL": "https://sleezzi.github.io/DarkReader/website/numworks.com.css",
-        "author": "Sleezzi"
+        "author": "Sleezzi",
+        "style": {
+            "url": "https://sleezzi.github.io/DarkReader/website/numworks.com.css",
+            "background": [ "#333" ],
+            "text": {
+                "default": [ "white" ],
+                "link": "white"
+            }
+        }
     },
     "roblox.com": {
         "name": "Roblox",
         "website": "roblox.com",
-        "styleURL": "https://sleezzi.github.io/DarkReader/website/roblox.com.css",
-        "author": "Sleezzi"
+        "author": "Sleezzi",
+        "style": {
+            "url": "https://sleezzi.github.io/DarkReader/website/roblox.com.css",
+            "background": [ "#333" ],
+            "text": {
+                "default": [ "white" ],
+                "link": "white"
+            }
+        }
     },
     "google.com": {
         "name": "Google",
         "website": "google.com",
-        "styleURL": "https://sleezzi.github.io/DarkReader/website/google.com.css",
-        "author": "Sleezzi"
+        "author": "Sleezzi",
+        "style": {
+            "url": "https://sleezzi.github.io/DarkReader/website/google.com.css",
+            "background": [ "#333" ],
+            "text": {
+                "default": [ "white" ],
+                "link": "white"
+            }
+        }
     },
     "google.ru": {
         "name": "Google",
         "website": "google.com",
-        "styleURL": "https://sleezzi.github.io/DarkReader/website/google.com.css",
-        "author": "Sleezzi"
+        "author": "Sleezzi",
+        "style": {
+            "url": "https://sleezzi.github.io/DarkReader/website/google.com.css",
+            "background": [ "#333" ],
+            "text": {
+                "default": [ "white" ],
+                "link": "white"
+            }
+        }
     },
     "google.fr": {
         "name": "Google",
         "website": "google.com",
-        "styleURL": "https://sleezzi.github.io/DarkReader/website/google.com.css",
-        "author": "Sleezzi"
+        "author": "Sleezzi",
+        "style": {
+            "url": "https://sleezzi.github.io/DarkReader/website/google.com.css",
+            "background": [ "#333" ],
+            "text": {
+                "default": [ "white" ],
+                "link": "white"
+            }
+        }
     },
     "google.es": {
         "name": "Google",
         "website": "google.com",
-        "styleURL": "https://sleezzi.github.io/DarkReader/website/google.com.css",
-        "author": "Sleezzi"
+        "author": "Sleezzi",
+        "style": {
+            "url": "https://sleezzi.github.io/DarkReader/website/google.com.css",
+            "background": [ "#333" ],
+            "text": {
+                "default": [ "white" ],
+                "link": "white"
+            }
+        }
     },
     "google.eu": {
         "name": "Google",
         "website": "google.com",
-        "styleURL": "https://sleezzi.github.io/DarkReader/website/google.com.css",
-        "author": "Sleezzi"
+        "author": "Sleezzi",
+        "style": {
+            "url": "https://sleezzi.github.io/DarkReader/website/google.com.css",
+            "background": [ "#333" ],
+            "text": {
+                "default": [ "white" ],
+                "link": "white"
+            }
+        }
     },
     "google.to": {
         "name": "Google",
         "website": "google.com",
-        "styleURL": "https://sleezzi.github.io/DarkReader/website/google.com.css",
-        "author": "Sleezzi"
+        "author": "Sleezzi",
+        "style": {
+            "url": "https://sleezzi.github.io/DarkReader/website/google.com.css",
+            "background": [ "#333", "#555" ],
+            "text": {
+                "default": [ "white" ],
+                "link": "white"
+            }
+        }
+    },
+    "spotify.com": {
+        "name": "Spotify",
+        "website": "spotify.com",
+        "author": "Sleezzi",
+        "style": {
+            "url": "https://sleezzi.github.io/DarkReader/website/spotify.com.css",
+            "background": [ "#333", "#222", "#111" ],
+            "text": {
+                "default": [ "white", "#AAA" ],
+                "link": "white"
+            }
+        }
     },
     "youtube.com": {
         "name": "YouTube",
         "website": "youtube.com",
-        "styleURL": "https://sleezzi.github.io/DarkReader/website/youtube.com.css",
-        "author": "Sleezzi"
+        "author": "Sleezzi",
+        "style": {
+            "url": "https://sleezzi.github.io/DarkReader/website/youtube.com.css",
+            "background": [ "#333", "#999", "#555", "#666" ],
+            "text": {
+                "default": [ "white" ],
+                "link": "rgb(6, 95, 212)"
+            }
+        }
     }
 }
