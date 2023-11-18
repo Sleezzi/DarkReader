@@ -4,7 +4,8 @@
     discord: https://discord.gg/kzpUQaNqyV
  */
 
- div#modal-dialog > div, body {
+ div#modal-dialog > div, body
+     {
     background: #333 !important;
     color: white !important;
 }

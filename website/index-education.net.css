@@ -4,7 +4,7 @@
     discord: https://discord.gg/kzpUQaNqyV
  */
   
-div#conteneur-page > div > div,
+.zone-principale > .ie-ellipsis, div#conteneur-page > div > div,
 div.fluid-bloc.conteneur-droite.p-left.conteneur-liste-CDT,
 .liste-date, div.conteneur-ressourcePeda, div.SansMain.liste_fixed.liste-focus-grid div,
 div.ObjetListe.skin_flatDesign.ombre-droite.DonneesListe_RubriqueDocuments.background-selec,

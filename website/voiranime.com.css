@@ -4,11 +4,13 @@
     discord: https://discord.gg/kzpUQaNqyV
  */
 
-body, .profile-manga, .extend, .pages, .current, .previouspostslink, .nextpostslink {
+body
+    , .profile-manga, .extend, .pages, .current, .previouspostslink, .nextpostslink {
   background: #333;
 }
 
-body, .profile-manga, #menu-item-916 a, .url, .h5 a, .h4, .wp-manga-chapter a,
+body
+    , .profile-manga, #menu-item-916 a, .url, .h5 a, .h4, .wp-manga-chapter a,
 .post-title h1, .post-content_item div h5, .comment-content p, .comment-author * {
   color: white !important;
 }

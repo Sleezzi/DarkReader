@@ -50,7 +50,8 @@ div[class="relative flex w-[calc(100%-50px)] flex-col gap-1 md:gap-3 lg:w-[calc(
   color: white !important;
 }
 
-body {
+body
+     {
   color: white !important;
   background: #333  !important;
 }
