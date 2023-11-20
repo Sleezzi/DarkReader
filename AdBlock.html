@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DarkReader/title>
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+    <title>DarkReader</title>
 </head>
 <body>
     <style>
@@ -57,7 +58,7 @@
     </style>
     <div class="image-slider" id="imageSlider">
         <button style="display: none;" id="prev" class="arrow">&#9664;</button>
-        <img style="height: auto;max-height: 300px;margin: 0;" src="./tutoimg/0.png" alt="Image 1">
+        <img style="height: auto;max-height: 300px;margin: 0;" src="./img/AdBlock/0.png" alt="Image 1">
         <button id="next" class="arrow">&#9654;</button>
     </div>
     <div class="copy-container" id="copyContainer">
@@ -77,7 +78,7 @@
                 this.style.display = "inline-block";
             }
             const imageElement = document.querySelector('.image-slider img');
-            imageElement.src = `./tutoimg/${currentImageIndex}.png`;
+            imageElement.src = `./img/AdBlock/${currentImageIndex}.png`;
         }
         document.querySelector("button#next").onclick = function() {
             currentImageIndex++;
@@ -90,7 +91,7 @@
             }
 
             const imageElement = document.querySelector('.image-slider img');
-            imageElement.src = `./tutoimg/${currentImageIndex}.png`;
+            imageElement.src = `./img/AdBlock/${currentImageIndex}.png`;
         }
 
         document.querySelector("button#copy-btn").onclick = function() {
@@ -102,7 +103,7 @@
             document.execCommand('copy');
             document.querySelector("label#textCopy").style = "display: none;";
             window.getSelection().removeAllRanges();
-            alert('Texte copié !');
+            alert('Text copied!');
         }
     </script>
 </body>
