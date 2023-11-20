@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Copier le texte</title>
+</head>
+<body>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .image-slider {
+            position: relative;
+            text-align: center;
+        }
+
+        .arrow {
+            font-size: 24px;
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            margin: 0;
+            height: calc(100% - 2px);
+            padding: 0 10px 0 10px;
+            border: 0;
+            background: transparent;
+            color: white;
+        }
+
+        #prev {
+            left: -40px;
+            border-radius: 5px 0 0 5px;
+        }
+
+        #next {
+            border-radius: 0 5px 5px 0;
+        }
+
+        .copy-container {
+            text-align: center;
+        }
+
+        button#copy-btn {
+            margin-top: 10px;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+    </style>
+    <div class="image-slider" id="imageSlider">
+        <button style="display: none;" id="prev" class="arrow">&#9664;</button>
+        <img style="height: auto;max-height: 300px;margin: 0;" src="./tutoimg/0.png" alt="Image 1">
+        <button id="next" class="arrow">&#9654;</button>
+    </div>
+    <div class="copy-container" id="copyContainer">
+        <button id="copy-btn">Copy the text to paste</button>
+        <label id="textCopy" style="display: none;" for="copy-btn">@@||sleezzi.github.io/*^$document,script,image,stylesheet,object,xmlhttprequest,subdocument,ping,websocket,webrtc,elemhide,generichide,genericblock,popup,font,media,other</label>
+    </div>
+    <script>
+        var currentImageIndex = 0;
+        var images = 5;
+        document.querySelector("button#prev").onclick = function() {
+            currentImageIndex--;
+            this.style.display = "inline-block";
+            document.querySelector("button#next").style.display = "inline-block";
+            if (currentImageIndex <= 0) {
+                this.style.display = "none";
+            } else {
+                this.style.display = "inline-block";
+            }
+            const imageElement = document.querySelector('.image-slider img');
+            imageElement.src = `./tutoimg/${currentImageIndex}.png`;
+        }
+        document.querySelector("button#next").onclick = function() {
+            currentImageIndex++;
+            document.querySelector("button#prev").style.display = "inline-block";
+            this.style.display = "inline-block";
+            if (currentImageIndex >= images-1) {
+                this.style.display = "none";
+            } else {
+                this.style.display = "inline-block";
+            }
+
+            const imageElement = document.querySelector('.image-slider img');
+            imageElement.src = `./tutoimg/${currentImageIndex}.png`;
+        }
+
+        document.querySelector("button#copy-btn").onclick = function() {
+            window.getSelection().removeAllRanges();
+            var range = document.createRange();
+            document.querySelector("label#textCopy").style = "";
+            range.selectNode(document.querySelector("label#textCopy"));
+            window.getSelection().addRange(range);
+            document.execCommand('copy');
+            document.querySelector("label#textCopy").style = "display: none;";
+            window.getSelection().removeAllRanges();
+            alert('Texte copié !');
+        }
+    </script>
+</body>
+</html>
