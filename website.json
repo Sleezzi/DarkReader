@@ -2,6 +2,7 @@
     "index-education.net": {
         "name": "Pronote",
         "website": "index-education.net",
+        "icon": "https://sleezzi.github.io/DarkReader/website/img/Pronote.png",
         "styleURL": "https://sleezzi.github.io/DarkReader/website/index-education.net.css",
         "author": "Sleezzi %owner%"
     },
@@ -34,6 +35,7 @@
     "roblox.com": {
         "name": "Roblox",
         "website": "roblox.com",
+        "icon": "https://sleezzi.github.io/DarkReader/website/img/Roblox.png",
         "styleURL": "https://sleezzi.github.io/DarkReader/website/roblox.com.css",
         "author": "Sleezzi %owner%"
     },
