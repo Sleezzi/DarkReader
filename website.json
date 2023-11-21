@@ -3,88 +3,88 @@
         "name": "Pronote",
         "website": "index-education.net",
         "styleURL": "https://sleezzi.github.io/DarkReader/website/index-education.net.css",
-        "author": "Sleezzi %verified%"
+        "author": "Sleezzi %owner%"
     },
     "iledefrance.fr": {
         "name": "ENT - Ile de France",
         "website": "iledefrance.fr",
         "styleURL": "https://sleezzi.github.io/DarkReader/website/iledefrance.fr.css",
-        "author": "Sleezzi %verified%"
+        "author": "Sleezzi %owner%"
     },
     "voiranime.com": {
         "name": "VoirAnime",
         "website": "voiranime.com",
         "icon": "https://sleezzi.github.io/DarkReader/website/img/Voiranime.png",
         "styleURL": "https://sleezzi.github.io/DarkReader/website/voiranime.com.css",
-        "author": "Sleezzi %verified%"
+        "author": "Sleezzi %owner%"
     },
     "openai.com": {
         "name": "OpenAI",
         "website": "openai.com",
         "icon": "https://sleezzi.github.io/DarkReader/website/img/OpenAI.png",
         "styleURL": "https://sleezzi.github.io/DarkReader/website/openai.com.css",
-        "author": "Sleezzi %verified%"
+        "author": "Sleezzi %owner%"
     },
     "numworks.com": {
         "name": "Numworks",
         "website": "numworks.com",
         "styleURL": "https://sleezzi.github.io/DarkReader/website/numworks.com.css",
-        "author": "Sleezzi %verified%"
+        "author": "Sleezzi %owner%"
     },
     "roblox.com": {
         "name": "Roblox",
         "website": "roblox.com",
         "styleURL": "https://sleezzi.github.io/DarkReader/website/roblox.com.css",
-        "author": "Sleezzi %verified%"
+        "author": "Sleezzi %owner%"
     },
     "google.com": {
         "name": "Google",
         "website": "google.com",
         "icon": "https://sleezzi.github.io/DarkReader/website/img/Google.png",
         "styleURL": "https://sleezzi.github.io/DarkReader/website/google.com.css",
-        "author": "Sleezzi %verified% & Lekrkoekj"
+        "author": "Sleezzi %owner% & Lekrkoekj"
     },
     "google.ru": {
         "name": "Google",
         "website": "google.com",
         "styleURL": "https://sleezzi.github.io/DarkReader/website/google.com.css",
-        "author": "Sleezzi %verified% & Lekrkoekj"
+        "author": "Sleezzi %owner% & Lekrkoekj"
     },
     "google.fr": {
         "name": "Google",
         "website": "google.com",
         "styleURL": "https://sleezzi.github.io/DarkReader/website/google.com.css",
-        "author": "Sleezzi %verified% & Lekrkoekj"
+        "author": "Sleezzi %owner% & Lekrkoekj"
     },
     "google.es": {
         "name": "Google",
         "website": "google.com",
         "styleURL": "https://sleezzi.github.io/DarkReader/website/google.com.css",
-        "author": "Sleezzi %verified% & Lekrkoekj"
+        "author": "Sleezzi %owner% & Lekrkoekj"
     },
     "google.eu": {
         "name": "Google",
         "website": "google.com",
         "styleURL": "https://sleezzi.github.io/DarkReader/website/google.com.css",
-        "author": "Sleezzi %verified% & Lekrkoekj"
+        "author": "Sleezzi %owner% & Lekrkoekj"
     },
     "google.to": {
         "name": "Google",
         "website": "google.com",
         "styleURL": "https://sleezzi.github.io/DarkReader/website/google.com.css",
-        "author": "Sleezzi %verified% & Lekrkoekj"
+        "author": "Sleezzi %owner% & Lekrkoekj"
     },
     "youtube.com": {
         "name": "YouTube",
         "website": "youtube.com",
         "icon": "https://sleezzi.github.io/DarkReader/website/img/YouTube.png",
         "styleURL": "https://sleezzi.github.io/DarkReader/website/youtube.com.css",
-        "author": "Sleezzi %verified%"
+        "author": "Sleezzi %owner%"
     },
     "spotify.com": {
         "name": "Spotify",
         "website": "spotify.com",
         "styleURL": "https://sleezzi.github.io/DarkReader/website/spotify.com.css",
-        "author": "Sleezzi %verified%"
+        "author": "Sleezzi %owner%"
     }    
 }
