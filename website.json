@@ -14,12 +14,14 @@
     "voiranime.com": {
         "name": "VoirAnime",
         "website": "voiranime.com",
+        "icon": "https://sleezzi.github.io/DarkReader/website/img/Voiranime.png",
         "styleURL": "https://sleezzi.github.io/DarkReader/website/voiranime.com.css",
         "author": "Sleezzi %verified%"
     },
     "openai.com": {
         "name": "OpenAI",
         "website": "openai.com",
+        "icon": "https://sleezzi.github.io/DarkReader/website/img/OpenAI.png",
         "styleURL": "https://sleezzi.github.io/DarkReader/website/openai.com.css",
         "author": "Sleezzi %verified%"
     },
@@ -38,6 +40,7 @@
     "google.com": {
         "name": "Google",
         "website": "google.com",
+        "icon": "https://sleezzi.github.io/DarkReader/website/img/Google.png",
         "styleURL": "https://sleezzi.github.io/DarkReader/website/google.com.css",
         "author": "Sleezzi %verified% & Lekrkoekj"
     },
@@ -74,6 +77,7 @@
     "youtube.com": {
         "name": "YouTube",
         "website": "youtube.com",
+        "icon": "https://sleezzi.github.io/DarkReader/website/img/YouTube.png",
         "styleURL": "https://sleezzi.github.io/DarkReader/website/youtube.com.css",
         "author": "Sleezzi %verified%"
     },
