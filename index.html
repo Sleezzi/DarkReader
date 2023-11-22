@@ -4,22 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DarkReader</title>
+    <link rel="shortcut icon" href="/DarkReader/favicon.ico" type="image/x-icon">
     <style>
         body {
             font-family: Arial, sans-serif;
             text-align: center;
             background: #333;
             animation: changeBackground 0.5s;
+            margin: 0;
         }
-
         h1 {
             color: #FFF;
         }
-
         p {
             color: #d8d8d8;
         }
-
+        a {
+            text-decoration: none;
+            color: white;
+            transition: color .3s;
+        }
+        a:hover {
+            color: #0063c6;
+        }
         #install {
             background: #0073e6;
             color: #fff;
@@ -32,19 +39,100 @@
             background: #0054a7;
             transition: background .5s;
         }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, 300px);
+            height: auto;
+            justify-content: center;
+            width: 100%;
+            gap: 15% 2%;
+        }
+        .about {
+            margin: 15% 0 0 0;
+        }
+        .container {
+            height: 100%;
+            width: 100%;
+            border-radius: 2vh;
+            background: #777;
+            box-shadow: 2px 2px 2px 2px gray;
+            transition: scale .5s;
+        }
+        .container:hover {
+            transform: scale(1.025);
+        }
+        .container > div {
+            width: 100%;
+            color: white;
+        }
+        .container > div > p {
+            color: #D1D1D1;
+            text-align: end;
+        }
+        span.verified {
+            display: inline-block;
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            background: #00a6ff;
+            color: white;
+            text-align: center;
+            line-height: 15px;
+            font-size: 10px;
+        }
+        span.owner {
+            display: inline-block;
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            background: #ffff00;
+            border: 1px solid #AAAA00;
+            color: black;
+            text-align: center;
+            line-height: 15px;
+            font-size: 10px;
+        }
         @keyframes changeBackground {
-            0% {
+            from {
                 background: #FFF;
             }
-            100% {
+            to {
                 background: #333;
             }
         }
     </style>
 </head>
 <body>
-    <h1>DarkReader</h1>
-    <p>Change web pages to be dark.</p>
-    <a id="install">Comming soon...</a>
+    <div>
+        <h1>DarkReader</h1>
+        <p style="margin: 50px;">Change web pages to be dark.</p>
+        <a id="install">Comming soon...</a>
+    </div>
+    <div class="about grid">
+    </div>
+    <script>
+        (async () => {
+            let resp = await fetch("/DarkReader/website.json", { method: "GET", cache: "no-store" });
+            if (resp.status !== 200) return;
+            resp = await resp.json();
+            for (website in resp) {
+                if (resp[website] && resp[website].name && resp[website].website && resp[website].icon && resp[website].author) {
+                    const element = document.createElement("a");
+                    element.classList.add("container");
+                    element.href = `https://${resp[website].website}`;
+                    element.target = "_blank";
+                    element.innerHTML = `
+<div style="height: 75%;width: 100%; display: flex; justify-content: center; align-items: center;">
+    <img style="height: 90%;width: 90%;" src="${resp[website].icon}" alt="${resp[website].name}">
+</div>
+<div style="height: 25%; width: 100%;">
+    <h3>${resp[website].name}</h3>
+    <p>Made by: <b>${resp[website].author.replaceAll("%verified%", "</b><span aria-label=\"Verified user\" class=\"verified\">✓</span><b>").replaceAll("%owner%", "</b><span aria-label=\"Made by the Owner\" class=\"owner\">✓</span><b>").replaceAll("&", "</b>&<b>")}</b></p>
+</div>`;
+                    document.querySelector(".about").appendChild(element);
+                }
+            }
+        })();
+    </script>
 </body>
 </html>
