@@ -11,7 +11,7 @@
 
 #ENT - Ile de France|+*iledefrance.fr|@Sleezzi %owner%|$https://sleezzi.github.io/DarkReader/website/iledefrance.fr.css|
 #Pronote|+*index-education.net|@Sleezzi %owner%|$https://sleezzi.github.io/DarkReader/website/index-education.net.css|
-#Google|+google.*|@Sleezzi %owner% & Lekrkoekj|$https://sleezzi.github.io/DarkReader/website/google.*.css|
+#Google|+google.*|@Sleezzi %owner%|$https://sleezzi.github.io/DarkReader/website/google.*.css|
 #VoirAnime|+*voiranime.com|@Sleezzi %owner%|$https://sleezzi.github.io/DarkReader/website/voiranime.com.css|
 #OpenAI|+*openai.com|@Sleezzi %owner%|$https://sleezzi.github.io/DarkReader/website/openai.com.css|
 #Numworks|+numworks.com|@Sleezzi %owner%|$https://sleezzi.github.io/DarkReader/website/numworks.com.css|
