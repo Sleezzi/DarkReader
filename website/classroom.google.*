@@ -1,13 +1,6 @@
 /*      Made by Lekrkoekj
     Copyright © Lekrkoekj - 2023 - All right reserved
  */
-/* Color variables */
-body {
-    bg-light: ;
-    bg-mid: ;
-    bg-dark: #333;
-}
-
 /* Backgrounds */
 .Tabkde > .OX4Vcb, .joJglb, .I7OXgf, .iph-dialog.iph-dialog, body, .p0oLxb, .y2d25, .OlXwxf .SFCE1b, .DC55n td {
     background: #333;
