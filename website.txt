@@ -9,12 +9,12 @@
 ! GitHub pull requests: https://github.com/Sleezzi/DarkReader/pulls
 
 
-+*iledefrance.fr|#ENT - Ile de France|@Sleezzi %owner%|$https://sleezzi.github.io/DarkReader/website/iledefrance.fr.css|
-+*index-education.net|#Pronote@Sleezzi %owner%$https://sleezzi.github.io/DarkReader/website/index-education.net.css|
-+google.*|#Google|@Sleezzi %owner% & Lekrkoekj|$https://sleezzi.github.io/DarkReader/website/google.*.css|
-+*voiranime.com|#VoirAnime|@Sleezzi %owner%|$https://sleezzi.github.io/DarkReader/website/voiranime.com.css|
-+*openai.com|#OpenAI|@Sleezzi %owner%|$https://sleezzi.github.io/DarkReader/website/openai.com.css|
-+numworks.com|#Numworks|@Sleezzi %owner%|$https://sleezzi.github.io/DarkReader/website/numworks.com.css|
-+roblox.com|#Roblox|@Sleezzi %owner%|$https://sleezzi.github.io/DarkReader/website/roblox.com.css|
-+youtube.*|#YouTube|@Sleezzi %owner%|$https://sleezzi.github.io/DarkReader/website/youtube.*.css|
-+open.spotify.*|#Spotify|@Sleezzi %owner%|$https://sleezzi.github.io/DarkReader/website/spotify.*.css|
+#ENT - Ile de France|+*iledefrance.fr|@Sleezzi %owner%|$https://sleezzi.github.io/DarkReader/website/iledefrance.fr.css|
+#Pronote|+*index-education.net|@Sleezzi %owner%|$https://sleezzi.github.io/DarkReader/website/index-education.net.css|
+#Google|+google.*|@Sleezzi %owner% & Lekrkoekj|$https://sleezzi.github.io/DarkReader/website/google.*.css|
+#VoirAnime|+*voiranime.com|@Sleezzi %owner%|$https://sleezzi.github.io/DarkReader/website/voiranime.com.css|
+#OpenAI|+*openai.com|@Sleezzi %owner%|$https://sleezzi.github.io/DarkReader/website/openai.com.css|
+#Numworks|+numworks.com|@Sleezzi %owner%|$https://sleezzi.github.io/DarkReader/website/numworks.com.css|
+#Roblox|+roblox.com|@Sleezzi %owner%|$https://sleezzi.github.io/DarkReader/website/roblox.com.css|
+#YouTube|+youtube.*|@Sleezzi %owner%|$https://sleezzi.github.io/DarkReader/website/youtube.*.css|
+#Spotify|+open.spotify.*|@Sleezzi %owner%|$https://sleezzi.github.io/DarkReader/website/spotify.*.css|
