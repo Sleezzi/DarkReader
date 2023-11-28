@@ -48,7 +48,7 @@
       "run_at": "document_idle"
     },
     {
-      "matches": [ "http://sleezzi.github.io/DarkReader/*", "https://sleezzi.github.io/DarkReader/*" ],
+      "matches": [ "https://sleezzi.github.io/DarkReader/*" ],
       "js": ["/js/DarkReaderWebsite.js"],
       "match_about_blank": true,
       "run_at": "document_idle"
