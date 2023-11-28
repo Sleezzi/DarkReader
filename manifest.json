@@ -1,0 +1,57 @@
+{
+  "manifest_version": 3,
+  "name": "DarkReader",
+  "short_name": "Dark",
+  "description": "Change web pages to be dark.",
+  "version": "0.0.1",
+  "author": "Sleezzi",
+  "icons": {
+    "16": "./img/icon/Logo16.png",
+    "32": "./img/icon/Logo32.png",
+    "48": "./img/icon/Logo48.png",
+    "128": "./img/icon/Logo128.png"
+  },
+  "action": {
+    "default_popup": "/popup/popup.html",
+    "default_icon": "/img/icon/Logo.png",
+    "default_title": "DarkReader - Enabled"
+  },
+  "options_ui": {
+    "open_in_tab": true,
+    "page": "/popup/popup.html?options"
+  },
+  "permissions": [
+    "background",
+    "storage",
+    "tabs",
+    "notifications",
+    "unlimitedStorage",
+    "activeTab"
+  ],
+  "optional_permissions": [ "management" ],
+  "host_permissions": [
+    "*://*.sleezzi.github.io/*",
+    "*://*.github.com/Sleezzi/*",
+    "<all_urls>"
+  ],
+  "background": {
+    "service_worker": "js/background.js",
+    "persitent": true
+  },
+  "homepage_url": "https://sleezzi.github.io/DarkReader",
+  "content_scripts": [
+    {
+      "all_frames": true,
+      "matches": [ "http://*/*", "https://*/*" ],
+      "js": ["/js/content.js"],
+      "match_about_blank": true,
+      "run_at": "document_idle"
+    },
+    {
+      "matches": [ "http://sleezzi.github.io/DarkReader/*", "https://sleezzi.github.io/DarkReader/*" ],
+      "js": ["/js/DarkReaderWebsite.js"],
+      "match_about_blank": true,
+      "run_at": "document_idle"
+    }
+  ]
+}
