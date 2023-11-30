@@ -4,13 +4,11 @@
     discord: https://discord.gg/kzpUQaNqyV
  */
 
-
 body
     , #main {
 	background: #333 !important;
 	color: white !important;
 }
-
 
 h1, .block-link svg, footer:nth-child(3),
 nav#main-nav > div > div:nth-child(4) > ul:nth-child(1) > li > div > div > ul > li > a,

@@ -8,18 +8,20 @@
 ! GitHub issues: https://github.com/Sleezzi/DarkReader/issues
 ! GitHub pull requests: https://github.com/Sleezzi/DarkReader/pulls
 
-
+! School website
 #ENT - Ile de France|+*iledefrance.fr|@Sleezzi %owner%|$https://sleezzi.github.io/DarkReader/website/iledefrance.fr.css|
 #Pronote|+*index-education.net|@Sleezzi %owner%|$https://sleezzi.github.io/DarkReader/website/index-education.net.css|
+#Numworks|+numworks.com|@Sleezzi %owner%|$https://sleezzi.github.io/DarkReader/website/numworks.com.css|
+# Google website
 #Google|+google.*|@Sleezzi %owner%|$https://sleezzi.github.io/DarkReader/website/google.*.css|
 #Google Calendar|+calendar.google.*|@Lekrkoekj|$https://sleezzi.github.io/DarkReader/website/calendar.google.*.css|
 #GMail|+mail.google.*|@Globex Designs, Inc.|$https://sleezzi.github.io/DarkReader/website/mail.google.*.css|
 #Google Classroom|+classroom.google.*|@Lekrkoekj|$https://sleezzi.github.io/DarkReader/website/classroom.google.*.css|
+! Other
 #Atlassian|+*.atlassian.net|@Robert Parker|$https://sleezzi.github.io/DarkReader/website/*.atlassian.net.css|
 #VoirAnime|+*voiranime.com|@Sleezzi %owner%|$https://sleezzi.github.io/DarkReader/website/voiranime.com.css|
 #OpenAI|+*openai.com|@Sleezzi %owner%|$https://sleezzi.github.io/DarkReader/website/openai.com.css|
-#Numworks|+numworks.com|@Sleezzi %owner%|$https://sleezzi.github.io/DarkReader/website/numworks.com.css|
 #Roblox|+roblox.com|@Sleezzi %owner%|$https://sleezzi.github.io/DarkReader/website/roblox.com.css|
 #YouTube|+youtube.*|@Sleezzi %owner%|$https://sleezzi.github.io/DarkReader/website/youtube.*.css|
 #Spotify|+open.spotify.*|@Sleezzi %owner%|$https://sleezzi.github.io/DarkReader/website/spotify.*.css|
-#Amazon (BETA)|+amazon.*|@Sleeping & Sleezzi %owner%|$https://sleezzi.github.io/DarkReader/website/amazon.*.css|
+#Amazon (BETA)|+amazon.*|@sleepin|$https://sleezzi.github.io/DarkReader/website/amazon.*.css|

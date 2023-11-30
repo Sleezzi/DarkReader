@@ -1,7 +1,5 @@
-/*      Made by Sleeping
-            Updated by Sleezzi
-    Copyright © Sleeping - 2023 - All right reserved
-    Copyright © Sleezzi - 2023 - All right reserved
+/*      Made by sleepin
+    Copyright © sleepin - 2023 - All right reserved
  */
 #nav-upnav {
     /*Ad Tag at Top*/
@@ -40,12 +38,6 @@
 	color: #fff !important;
 }
 
-
-
-
-
-
-
 .nav-spinner {   
 	background-image: rgba(0,0,0,0) url(https://images-na.ssl-images-amazon.com/images/G/01/javascripts/lib/popover/images/snake._CB192571611_.gif) !important;
 
@@ -77,7 +69,6 @@
 }
 /*TESTING*//*TESTING*//*TESTING*//*TESTING*//*TESTING*//*TESTING*/
 /*TESTING*//*TESTING*//*TESTING*//*TESTING*//*TESTING*//*TESTING*/
-
 
 /*
 	Prime Video
@@ -933,8 +924,6 @@ li.of-hover {
 	background: #333 !important;
 }
 
-
-
 .a-popover-modal .a-popover-footer {
 	background: #333 !important;
 	border-top: 1px solid #333 !important;
@@ -1134,7 +1123,6 @@ textarea {
 .a-button-toggle.a-button-selected.a-button-unavailable {
 	border: 1px solid #f00 !important;
 }
-
 
 .banner-border {
 	background: #333 !important;
@@ -1512,7 +1500,6 @@ cu-eb-bottom-left {
 	border-bottom: 1px solid #333 !important;
 }
 
-
 [src*="retry-credit-card-yellow"], [src*="confirm-gold-3d"], [src*="use-this-address-yellow"] {
     filter: invert(100%) brightness(80%) contrast(105%);
 }
@@ -1706,10 +1693,6 @@ input, select, textarea {
     /*filter: invert(100%);*/
 }
 
-
-
-
-
 /*
 	BUY NOW CHECKOUT PAGE
 */
@@ -1739,12 +1722,6 @@ input, select, textarea {
 .addr-display ul {
 	color: #fff !important;
 }
-
-
-
-
-
-
 
 .nav-spinner {   
 	background-image: rgba(0,0,0,0) url(https://images-na.ssl-images-amazon.com/images/G/01/javascripts/lib/popover/images/snake._CB192571611_.gif) !important;
@@ -1777,7 +1754,6 @@ input, select, textarea {
 }
 /*TESTING*//*TESTING*//*TESTING*//*TESTING*//*TESTING*//*TESTING*/
 /*TESTING*//*TESTING*//*TESTING*//*TESTING*//*TESTING*//*TESTING*/
-
 
 /*
 	Prime Video
@@ -2637,8 +2613,6 @@ li.of-hover {
 	background: #333 !important;
 }
 
-
-
 .a-popover-modal .a-popover-footer {
 	background: #333 !important;
 	border-top: 1px solid #333 !important;
@@ -2838,7 +2812,6 @@ textarea {
 .a-button-toggle.a-button-selected.a-button-unavailable {
 	border: 1px solid #f00 !important;
 }
-
 
 .banner-border {
 	background: #333 !important;
@@ -3213,7 +3186,6 @@ cu-eb-bottom-left {
 	border-top: 1px solid #373737 !important;
 	border-bottom: 1px solid #333 !important;
 }
-
 
 [src*="retry-credit-card-yellow"], [src*="confirm-gold-3d"], [src*="use-this-address-yellow"] {
     filter: invert(100%) brightness(80%) contrast(105%);
