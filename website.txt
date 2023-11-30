@@ -12,6 +12,7 @@
 #ENT - Ile de France|+*iledefrance.fr|@Sleezzi %owner%|$https://sleezzi.github.io/DarkReader/website/iledefrance.fr.css|
 #Pronote|+*index-education.net|@Sleezzi %owner%|$https://sleezzi.github.io/DarkReader/website/index-education.net.css|
 #Google|+google.*|@Sleezzi %owner%|$https://sleezzi.github.io/DarkReader/website/google.*.css|
+#Google Calendar|+calendar.google.*|@Lekrkoekj|$https://sleezzi.github.io/DarkReader/website/calendar.google.*.css|
 #Google Classroom|+classroom.google.*|@Lekrkoekj|$https://sleezzi.github.io/DarkReader/website/classroom.google.*.css|
 #VoirAnime|+*voiranime.com|@Sleezzi %owner%|$https://sleezzi.github.io/DarkReader/website/voiranime.com.css|
 #OpenAI|+*openai.com|@Sleezzi %owner%|$https://sleezzi.github.io/DarkReader/website/openai.com.css|
