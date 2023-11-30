@@ -52,7 +52,7 @@ document.addEventListener("DOMContentLoaded", async function() {
                     this.style.display = "none";
                     document.querySelector("textarea#whitelist").rows = document.querySelector("textarea#whitelist").value.split("\n").length;
                     await chrome.runtime.sendMessage(`setWhiteList$whitelist=${document.querySelector("textarea#whitelist").value.replaceAll("\n", "$change$")}`);
-                    alert("Saved");
+                    alert("Saved, Updates the relevant pages that are open to apply the change to it");
                 }
             };
         } else {
