@@ -227,7 +227,7 @@ body.options > div#options {
     height: 100vh;
     width: 100%;
 }
-div#options > div:nth-child(2) {
+div#options > div:nth-child(3) {
     display: block;
 }
 div#options > div > div {

@@ -1,6 +1,6 @@
 let settings = {
 	terms: false,
-	whitelist: [ "*.github.io", "ext-twitch.tv" ]
+	whitelist: [ "sleezzi.github.io", "ext-twitch.tv" ]
 };
 
 chrome.storage.local.get("settings", value => {
