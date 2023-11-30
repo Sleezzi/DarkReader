@@ -13,8 +13,9 @@
 #Pronote|+*index-education.net|@Sleezzi %owner%|$https://sleezzi.github.io/DarkReader/website/index-education.net.css|
 #Google|+google.*|@Sleezzi %owner%|$https://sleezzi.github.io/DarkReader/website/google.*.css|
 #Google Calendar|+calendar.google.*|@Lekrkoekj|$https://sleezzi.github.io/DarkReader/website/calendar.google.*.css|
-#Atlassian|+*.atlassian.net|@Robert Parker|$https://sleezzi.github.io/DarkReader/website/*.atlassian.net.css|
+#GMail|+mail.google.*|@Globex Designs, Inc.|$https://sleezzi.github.io/DarkReader/website/mail.google.*.css|
 #Google Classroom|+classroom.google.*|@Lekrkoekj|$https://sleezzi.github.io/DarkReader/website/classroom.google.*.css|
+#Atlassian|+*.atlassian.net|@Robert Parker|$https://sleezzi.github.io/DarkReader/website/*.atlassian.net.css|
 #VoirAnime|+*voiranime.com|@Sleezzi %owner%|$https://sleezzi.github.io/DarkReader/website/voiranime.com.css|
 #OpenAI|+*openai.com|@Sleezzi %owner%|$https://sleezzi.github.io/DarkReader/website/openai.com.css|
 #Numworks|+numworks.com|@Sleezzi %owner%|$https://sleezzi.github.io/DarkReader/website/numworks.com.css|
