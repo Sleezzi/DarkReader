@@ -36,6 +36,8 @@ function clearURL(url) {
 }
 
 (async () => {
+    response = await chrome.runtime.sendMessage(`termsIsAccepted`);
+    if (response !== "Yes") return;
     const website = clearURL(window.location.href);
     if (!/^(https?|ftp):\/\/([^\s/$.?#].[^\s]*)$/.test(window.location.href)) return console.log(`DarkReader can't work on ${website}`);
     response = await chrome.runtime.sendMessage(`isInWhiteList$website=${website}`);

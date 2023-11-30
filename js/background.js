@@ -1,6 +1,6 @@
 let settings = {
 	terms: false,
-	whitelist: [ "github.io", "ext-twitch.tv" ]
+	whitelist: [ "*.github.io", "ext-twitch.tv" ]
 };
 
 chrome.storage.local.get("settings", value => {
@@ -46,8 +46,11 @@ chrome.runtime.onMessage.addListener(function (message, sender, sendResponse) {
 		return;
 	}
 	if (`${message}`.startsWith("isInWhiteList$website=")) {
-		sendResponse((settings.whitelist.find(url => url === `${message}`.replace("isInWhiteList$website=", "")) === undefined && settings.terms ? "No" : "Yes"));
-		return;
+		settings.whitelist.forEach(url => {
+			console.log((RegExp(`^${url.replace(/\./g, "\\.").replace(/\*/g, ".*")}$`).test(`${message}`.replace("isInWhiteList$website=", "")) ? `${url} match with ${`${message}`.replace("isInWhiteList$website=", "")}` : `${url} don't match with ${`${message}`.replace("isInWhiteList$website=", "")}`));
+			if (RegExp(`^${url.replace(/\./g, "\\.").replace(/\*/g, ".*")}$`).test(`${message}`.replace("isInWhiteList$website=", ""))) return sendResponse("Yes");
+		});
+		return sendResponse("No");
 	}
 	if (`${message}` === "getWhiteList") {
 		sendResponse(settings.whitelist);
@@ -59,7 +62,7 @@ chrome.runtime.onMessage.addListener(function (message, sender, sendResponse) {
 		chrome.storage.local.set({ "settings": settings });
 		return;
 	}
-	if (`${message}`.startsWith("termsAccepted")) {
+	if (`${message}`.startsWith("termsIsAccepted")) {
 		sendResponse((settings.terms === true ? "Yes" : "No"));
 		return;
 	}

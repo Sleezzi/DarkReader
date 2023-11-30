@@ -5,8 +5,8 @@ function clearURL(url) {
 
 document.addEventListener("DOMContentLoaded", async function() {
     let response;
-    response =  await chrome.runtime.sendMessage(`termsAccepted`);
-    if (response === "No") {
+    response =  await chrome.runtime.sendMessage(`termsIsAccepted`);
+    if (response !== "Yes") {
         document.body.classList.add("terms");
         document.querySelector("input").onchange = function() {
             if (this.checked) {
