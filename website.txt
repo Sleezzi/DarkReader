@@ -22,3 +22,4 @@
 #Roblox|+roblox.com|@Sleezzi %owner%|$https://sleezzi.github.io/DarkReader/website/roblox.com.css|
 #YouTube|+youtube.*|@Sleezzi %owner%|$https://sleezzi.github.io/DarkReader/website/youtube.*.css|
 #Spotify|+open.spotify.*|@Sleezzi %owner%|$https://sleezzi.github.io/DarkReader/website/spotify.*.css|
+#Amazon (BETA)|+amazon.*|@Sleeping & Sleezzi %owner%|$https://sleezzi.github.io/DarkReader/website/amazon.*.css|
