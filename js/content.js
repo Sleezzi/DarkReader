@@ -1,29 +1,5 @@
 let response;
 
-function getSelector(element) {
-    const selectors = [];
-    let currentElement = element;
-
-    while (currentElement && currentElement.tagName !== "BODY") {
-        let selector = currentElement.tagName.toLowerCase();
-        if (currentElement.id) {
-            selector += "#" + currentElement.id;
-            selectors.unshift(selector);
-            break; // Arrêtez la recherche lorsque vous trouvez un élément avec un ID unique
-        } else {
-            const siblings = currentElement.parentNode.children;
-            if (siblings.length > 1) {
-                let index = Array.from(siblings).indexOf(currentElement) + 1;
-                selector += `:nth-child(${index})`;
-            }
-            selectors.unshift(selector);
-            currentElement = currentElement.parentElement;
-        }
-    }
-
-    return selectors.join(" > ");
-}
-
 chrome.runtime.onMessage.addListener(function (message, sender, sendResponse) {
     if (`${message}` === "reload") {
         window.location.reload();
@@ -40,7 +16,7 @@ function clearURL(url) {
 (async () => {
     response = await chrome.runtime.sendMessage(`termsIsAccepted`);
     if (response !== "Yes") return;
-    const website = clearURL(window.location.href);
+    const website = clearURL(window.location.hostname);
     if (!/^(https?|ftp):\/\/([^\s/$.?#].[^\s]*)$/.test(window.location.href)) return console.log(`DarkReader can't work on ${website}`);
     response = await chrome.runtime.sendMessage(`isInWhiteList$website=${website}`);
     if (response === "Yes") return console.warn(`You have disabled DarkReader on "${website}"`, response);
