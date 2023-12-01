@@ -31,7 +31,9 @@ chrome.runtime.onMessage.addListener(function (message, sender, sendResponse) {
 });
 
 function clearURL(url) {
-	url = new URL(url).hostname.replaceAll("www.", "");
+	if (`${url}`.includes("https://")) url = url.replace("https://", "");
+	if (`${url}`.includes("http://")) url = url.replace("http://", "");
+	if (`${url}`.includes("www.")) url = url.replace("www.", "");
 	return url;
 }
 

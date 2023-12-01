@@ -1,9 +1,11 @@
 function clearURL(url) {
-	url = new URL(url).hostname.replaceAll("www.", "");
+	if (`${url}`.includes("https://")) url = url.replace("https://", "");
+	if (`${url}`.includes("http://")) url = url.replace("http://", "");
+	if (`${url}`.includes("www.")) url = url.replace("www.", "");
 	return url;
 }
 
-document.addEventListener("DOMContentLoaded", async function() {
+(async () => {
     let response;
     response =  await chrome.runtime.sendMessage(`termsIsAccepted`);
     if (response !== "Yes") {
@@ -40,7 +42,7 @@ document.addEventListener("DOMContentLoaded", async function() {
             }
             document.querySelector("textarea#whitelist").oninput = function() {
                 document.querySelector("button#save").style.display = "inline-block";
-                this.value = this.value.replace(/\n{2,}/g, "\n").replace(" ", "").replaceAll("https://", "").replaceAll("http://").toLowerCase();
+                this.value = clearURL(this.value.replace(/\n{2,}/g, "\n").replace(" ", "").toLowerCase());
                 if (this.value.startsWith("\n")) this.value.replace("\n", "");
                 this.rows = this.value.split("\n").length;
                 document.querySelector("button#save").style.height = `${this.rows * 16}px`;
@@ -62,7 +64,7 @@ document.addEventListener("DOMContentLoaded", async function() {
                 response = await fetch(`https://sleezzi.github.io/DarkReader/website.txt`, { method: "GET", cache: "no-store" });
                 if (response.status !== 200) throw new Error("Unable to make request: Invalid URL");
                 response = await response.text();
-                document.querySelector("label#name").innerHTML = `Website: ${clearURL(tabs[0].url)}`;
+                document.querySelector("label#name").innerHTML = `Website: ${clearURL(new URL(tabs[0].url).hostname)}`;
                 document.querySelector("label#author").innerHTML = `Style made by: <b>Sleezzi</b> <span aria-label=\"Made by the Owner\" class=\"owner\">✓</span>`;
                 document.querySelector("label#type").innerHTML = `Type: Auto`;
                 for (const line of response.split('\n')) {
@@ -72,7 +74,7 @@ document.addEventListener("DOMContentLoaded", async function() {
                     const name = line.match(/\#(.*?)\|/);
                     const author = line.match(/\@(.*?)\|/);
                     if (!url || !url[1] ||
-                    !RegExp(`^${url[1].replace(/\./g, "\\.").replace(/\*/g, ".*")}$`).test(clearURL(tabs[0].url)) ||
+                    !RegExp(`^${url[1].replace(/\./g, "\\.").replace(/\*/g, ".*")}$`).test(clearURL(new URL(tabs[0].url).hostname)) ||
                     !name || !name[1] ||
                     !author || !author[1] ||
                     !style || !style[1]) continue;
@@ -81,7 +83,7 @@ document.addEventListener("DOMContentLoaded", async function() {
                     document.querySelector("label#type").innerHTML = `Type: <b>Custom</b>`;
                     break;
                 }
-                response = await chrome.runtime.sendMessage(`isInWhiteList$website=${clearURL(tabs[0].url)}`);
+                response = await chrome.runtime.sendMessage(`isInWhiteList$website=${clearURL(new URL(tabs[0].url).hostname)}`);
                 if (response === "Yes") {
                     document.querySelector("#active > input").removeAttribute("checked");
                 } else {
@@ -89,9 +91,9 @@ document.addEventListener("DOMContentLoaded", async function() {
                 }
                 // Set ON/OFF
                 document.getElementById("active").onmouseup = async function() {
-                    response = await chrome.runtime.sendMessage(`addWebsiteToWhiteList$website=${clearURL(tabs[0].url)}`);
+                    response = await chrome.runtime.sendMessage(`addWebsiteToWhiteList$website=${clearURL(new URL(tabs[0].url).hostname)}`);
                 };
             });
         }
     }
-});
+})();

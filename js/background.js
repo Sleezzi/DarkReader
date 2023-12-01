@@ -10,7 +10,6 @@ chrome.storage.local.get("settings", value => {
 function clearURL(url) {
 	if (`${url}`.includes("https://")) url = url.replace("https://", "");
 	if (`${url}`.includes("http://")) url = url.replace("http://", "");
-	if (`${url}`.includes("ww1.")) url = url.replace("ww1.", "");
 	if (`${url}`.includes("www.")) url = url.replace("www.", "");
 	return url;
 }
@@ -33,21 +32,31 @@ async function sendMessageToCurrentTab(message) {
 	return response;
 }
 
-chrome.runtime.onMessage.addListener(function (message, sender, sendResponse) {	
+chrome.runtime.onMessage.addListener(function (message, sender, sendResponse) {
 	if (`${message}`.startsWith("addWebsiteToWhiteList$website=")) {
-		if (settings.whitelist.find(url => url === `${message}`.replace("addWebsiteToWhiteList$website=", ""))) {
-			settings.whitelist.splice(settings.whitelist.indexOf(`${message}`.replace("addWebsiteToWhiteList$website=", "")));
-		} else {
+		let finded;
+		settings.whitelist.forEach(url => {
+			console.log((RegExp(`^${url.replace(/\./g, "\\.").replace(/\*/g, ".*")}$`).test(`${message}`.replace("addWebsiteToWhiteList$website=", "")) ? `${url} match with ${`${message}`.replace("addWebsiteToWhiteList$website=", "")}` : `${url} don't match with ${`${message}`.replace("addWebsiteToWhiteList$website=", "")}`));
+			if (RegExp(`^${url.replace(/\./g, "\\.").replace(/\*/g, ".*")}$`).test(`${message}`.replace("addWebsiteToWhiteList$website=", ""))) {
+				console.log(settings.whitelist);
+				settings.whitelist.splice(settings.whitelist.indexOf(url));
+				console.log(settings.whitelist);
+				chrome.storage.local.set({ "settings": settings });
+				sendResponse("Yes");
+				sendMessageToCurrentTab("reload");
+				return finded = true;
+			}
+		});
+		if (!finded) {
 			settings.whitelist.push(`${message}`.replace("addWebsiteToWhiteList$website=", ""));
+			chrome.storage.local.set({ "settings": settings });
+			sendResponse("No");
+			sendMessageToCurrentTab("reload");
+			return;
 		}
-		sendResponse((settings.whitelist.find(url => url === `${message}`.replace("addWebsiteToWhiteList$website=", "")) === undefined ? "No" : "Yes"));
-		chrome.storage.local.set({ "settings": settings });
-		sendMessageToCurrentTab("reload");
-		return;
 	}
 	if (`${message}`.startsWith("isInWhiteList$website=")) {
 		settings.whitelist.forEach(url => {
-			console.log((RegExp(`^${url.replace(/\./g, "\\.").replace(/\*/g, ".*")}$`).test(`${message}`.replace("isInWhiteList$website=", "")) ? `${url} match with ${`${message}`.replace("isInWhiteList$website=", "")}` : `${url} don't match with ${`${message}`.replace("isInWhiteList$website=", "")}`));
 			if (RegExp(`^${url.replace(/\./g, "\\.").replace(/\*/g, ".*")}$`).test(`${message}`.replace("isInWhiteList$website=", ""))) return sendResponse("Yes");
 		});
 		return sendResponse("No");
