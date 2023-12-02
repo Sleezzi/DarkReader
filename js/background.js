@@ -36,30 +36,35 @@ chrome.runtime.onMessage.addListener(function (message, sender, sendResponse) {
 	if (`${message}`.startsWith("addWebsiteToWhiteList$website=")) {
 		let finded;
 		settings.whitelist.forEach(url => {
-			console.log((RegExp(`^${url.replace(/\./g, "\\.").replace(/\*/g, ".*")}$`).test(`${message}`.replace("addWebsiteToWhiteList$website=", "")) ? `${url} match with ${`${message}`.replace("addWebsiteToWhiteList$website=", "")}` : `${url} don't match with ${`${message}`.replace("addWebsiteToWhiteList$website=", "")}`));
-			if (RegExp(`^${url.replace(/\./g, "\\.").replace(/\*/g, ".*")}$`).test(`${message}`.replace("addWebsiteToWhiteList$website=", ""))) {
-				console.log(settings.whitelist);
+			if (!url.startsWith("@@") && RegExp(`^${url.replace(/\./g, "\\.").replace(/\*/g, ".*").replace("@@", "")}$`).test(`${message}`.replace("addWebsiteToWhiteList$website=", ""))) {
 				settings.whitelist.splice(settings.whitelist.indexOf(url));
-				console.log(settings.whitelist);
-				chrome.storage.local.set({ "settings": settings });
 				sendResponse("Yes");
-				sendMessageToCurrentTab("reload");
-				return finded = true;
+				finded = true;
 			}
 		});
 		if (!finded) {
 			settings.whitelist.push(`${message}`.replace("addWebsiteToWhiteList$website=", ""));
-			chrome.storage.local.set({ "settings": settings });
 			sendResponse("No");
-			sendMessageToCurrentTab("reload");
-			return;
 		}
+		chrome.storage.local.set({ "settings": settings });
+		sendMessageToCurrentTab("reload");
 	}
 	if (`${message}`.startsWith("isInWhiteList$website=")) {
+		let whitelisted;
 		settings.whitelist.forEach(url => {
-			if (RegExp(`^${url.replace(/\./g, "\\.").replace(/\*/g, ".*")}$`).test(`${message}`.replace("isInWhiteList$website=", ""))) return sendResponse("Yes");
+			if (whitelisted !== false && RegExp(`^${url.replace(/\./g, "\\.").replace(/\*/g, ".*").replace("@@", "")}$`).test(`${message}`.replace("isInWhiteList$website=", ""))) {
+				if (url.startsWith("@@")) {
+					return whitelisted = false;
+				} else {
+					whitelisted = true;
+				}
+			}
+			if (!whitelisted) {
+				sendResponse("No");
+			} else {
+				sendResponse("Yes");
+			};
 		});
-		return sendResponse("No");
 	}
 	if (`${message}` === "getWhiteList") {
 		sendResponse(settings.whitelist);
