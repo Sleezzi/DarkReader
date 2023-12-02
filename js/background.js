@@ -48,6 +48,7 @@ chrome.runtime.onMessage.addListener(function (message, sender, sendResponse) {
 		}
 		chrome.storage.local.set({ "settings": settings });
 		sendMessageToCurrentTab("reload");
+		return;
 	}
 	if (`${message}`.startsWith("isInWhiteList$website=")) {
 		let whitelisted;
@@ -59,12 +60,13 @@ chrome.runtime.onMessage.addListener(function (message, sender, sendResponse) {
 					whitelisted = true;
 				}
 			}
-			if (!whitelisted) {
-				sendResponse("No");
-			} else {
-				sendResponse("Yes");
-			};
 		});
+		if (!whitelisted) {
+			sendResponse("No");
+		} else {
+			sendResponse("Yes");
+		};
+		return;
 	}
 	if (`${message}` === "getWhiteList") {
 		sendResponse(settings.whitelist);
