@@ -57,6 +57,20 @@ function clearURL(url) {
                     alert("Saved, Updates the relevant pages that are open to apply the change to it");
                 }
             };
+            response = await chrome.runtime.sendMessage(`getCustomOnly`);
+            if (response === "Yes") {
+                document.querySelector("#customOnly > input").checked = true;
+            } else {
+                document.querySelector("#customOnly > input").removeAttribute("checked");
+            }
+            document.querySelector("#customOnly").onmouseup = async function() {
+                response = await chrome.runtime.sendMessage(`changeCustomOnly`);
+                if (response === "Yes") {
+                    document.querySelector("#customOnly > input").checked = true;
+                } else {
+                    document.querySelector("#customOnly > input").removeAttribute("checked");
+                } console.log(response);
+            }
         } else {
             chrome.tabs.query({ active: true, currentWindow: true }, async tabs => {
                 if (!tabs || !tabs[0] || !tabs[0].url || !/^(https?|ftp):\/\/([^\s/$.?#].[^\s]*)$/.test(tabs[0].url)) return document.body.classList.add("error");
@@ -64,9 +78,9 @@ function clearURL(url) {
                 response = await fetch(`https://sleezzi.github.io/DarkReader/website.txt`, { method: "GET", cache: "no-store" });
                 if (response.status !== 200) throw new Error("Unable to make request: Invalid URL");
                 response = await response.text();
-                document.querySelector("label#name").innerHTML = `Website: ${clearURL(new URL(tabs[0].url).hostname)}`;
-                document.querySelector("label#author").innerHTML = `Style made by: <b>Sleezzi</b> <span aria-label=\"Made by the Owner\" class=\"owner\">✓</span>`;
-                document.querySelector("label#type").innerHTML = `Type: Auto`;
+                document.querySelector("label#name").innerHTML = `${chrome.i18n.getMessage("popup_website")}: ${clearURL(new URL(tabs[0].url).hostname)}`;
+                document.querySelector("label#author").innerHTML = `${chrome.i18n.getMessage("popup_style_author")}: <b>Sleezzi</b> <span aria-label=\"Made by the Owner\" class=\"owner\">✓</span>`;
+                document.querySelector("label#type").innerHTML = `${chrome.i18n.getMessage("popup_type")}: ${chrome.i18n.getMessage("popup_auto")}`;
                 for (const line of response.split('\n')) {
                     if (line.trim() === '' || line.trim().startsWith('!')) continue;
                     const url = line.match(/\+(.*?)\|/);
@@ -78,9 +92,9 @@ function clearURL(url) {
                     !name || !name[1] ||
                     !author || !author[1] ||
                     !style || !style[1]) continue;
-                    document.querySelector("label#name").innerHTML = `Website: ${name[1]}`;
-                    document.querySelector("label#author").innerHTML = `Style made by: <b>${author[1].replaceAll("%verified%", "</b><span aria-label=\"Verified user\" class=\"verified\">✓</span><b>").replaceAll("%owner%", "</b><span aria-label=\"Made by the Owner\" class=\"owner\">✓</span><b>").replaceAll("&", "</b>&<b>")}</b>`;
-                    document.querySelector("label#type").innerHTML = `Type: <b>Custom</b>`;
+                    document.querySelector("label#name").innerHTML = `${chrome.i18n.getMessage("popup_website")}: ${name[1]}`;
+                    document.querySelector("label#author").innerHTML = `${chrome.i18n.getMessage("popup_style_author")}: <b>${author[1].replaceAll("%verified%", "</b><span aria-label=\"Verified user\" class=\"verified\">✓</span><b>").replaceAll("%owner%", "</b><span aria-label=\"Made by the Owner\" class=\"owner\">✓</span><b>").replaceAll("&", "</b>&<b>")}</b>`;
+                    document.querySelector("label#type").innerHTML = `${chrome.i18n.getMessage("popup_type")}: <b>${chrome.i18n.getMessage("popup_custom")}</b>`;
                     break;
                 }
                 response = await chrome.runtime.sendMessage(`isInWhiteList$website=${clearURL(new URL(tabs[0].url).hostname)}`);
@@ -92,6 +106,11 @@ function clearURL(url) {
                 // Set ON/OFF
                 document.getElementById("active").onmouseup = async function() {
                     response = await chrome.runtime.sendMessage(`addWebsiteToWhiteList$website=${clearURL(new URL(tabs[0].url).hostname)}`);
+                    if (response === "Yes") {
+                        document.querySelector("#active > input").checked = true;
+                    } else {
+                        document.querySelector("#active > input").removeAttribute("checked");
+                    }
                 };
             });
         }

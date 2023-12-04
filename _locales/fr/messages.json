@@ -1,0 +1,89 @@
+{
+  "extension_name": {
+    "description": "The extension's name",
+    "message": "DarkReader"
+  },
+  "extension_short_name": {
+    "description": "The shortname of the extension",
+    "message": "Dark"
+  },
+  "extension_description": {
+    "description": "The description of the extension",
+    "message": "Profitez de la page Web en mode sombre. DarkReader prend en charge certains sites Web de manière personnalisée !"
+  },
+  "extension_command": {
+    "description": "The keyboard shortcut to enable/disable the extension",
+    "message": "Activer/Désactiver l'extension sur un site"
+  },
+  "install_page_title": {
+    "description": "The title of the install's page",
+    "message": "DarkReader installée !"
+  },
+  "install_text_title": {
+    "description": "The text's title in the install's page",
+    "message": "L'extension DarkReader a été installée !"
+  },
+  "install_text_description": {
+    "description": "The text under the title in the install's page",
+    "message": "L'extension a été installée avec succès."
+  },
+  "update_page_title": {
+    "description": "The title of the update's page",
+    "message": "Dark Reader mis à jour !"
+  },
+  "update_text_title": {
+    "description": "The title of the update's page",
+    "message": "L'extension DarkReader a été mise à jour"
+  },
+  "update_text_description": {
+    "description": "The text under the title",
+    "message": "L'extension a été mise à jour avec succès."
+  },
+  "popup_terms_privacy": {
+    "message": "Politique de confidentialité"
+  },
+  "popup_terms_text": {
+    "description": "The text to ask the user to read the privacy policy",
+    "message": "Veuilliez lire notre <a href=\"https://sleezzi.github.io/DarkReader/Privacy\" target=\"_blank\">Politique de confidentialité</a> avant de continuer."
+  },
+  "popup_terms_accept": {
+    "message": "<input type=\"checkbox\">J'accepte"
+  },
+  "popup_terms_continue": {
+    "message": "Continuer"
+  },
+  "popup_website": {
+    "message": "Site"
+  },
+  "popup_type": {
+    "message": "Type"
+  },
+  "popup_auto": {
+    "message": "Automatique"
+  },
+  "popup_custom": {
+    "message": "Personnalisée"
+  },
+  "popup_style_author": {
+    "message": "Style fait par"
+  },
+  "popup_error_unsupported_title": {
+    "description": "Large text to say that the page is not supported by the extension",
+    "message": "DarkReader n'est pas pris en charge sur cette page"
+  },
+  "popup_error_unsupported_description": {
+    "description": "The small text to say that the page is not supported by the extension",
+    "message": "Cette page n'est pas optimisée pour DarkReader. Il n'est donc pas actif sur ce site."
+  },
+  "popup_options_whitelist": {
+    "message": "Liste blanche"
+  },
+  "popup_options_help_whitelist": {
+    "description": "The text 'Put \"*\" to represent an unknown element'",
+    "message": "Met \"*\" pour représenter un élément inconnu."
+  },
+  "popup_options_custom_only": {
+    "description": "The text for the option on custom only",
+    "message": "Modifiez uniquement les pages avec prise en charge personnalisée :"
+  }
+}

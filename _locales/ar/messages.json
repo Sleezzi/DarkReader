@@ -1,0 +1,89 @@
+{
+  "extension_name": {
+    "description": "اسم الإضافة",
+    "message": "DarkReader"
+  },
+  "extension_short_name": {
+    "description": "الاسم المختصر للإضافة",
+    "message": "Dark"
+  },
+  "extension_description": {
+    "description": "وصف الإضافة",
+    "message": "استمتع بتصفح الويب في وضع الظلام. يدعم DarkReader بعض المواقع بطريقة مخصصة!"
+  },
+  "extension_command": {
+    "description": "اختصار لوحة المفاتيح لتمكين/تعطيل الامتداد",
+    "message": "تنشيط/إلغاء تنشيط الامتداد على موقع ما"
+  },
+  "install_page_title": {
+    "description": "عنوان صفحة التثبيت",
+    "message": "DarkReader تم التثبيت!"
+  },
+  "install_text_title": {
+    "description": "عنوان النص في صفحة التثبيت",
+    "message": "تم تثبيت إضافة DarkReader!"
+  },
+  "install_text_description": {
+    "description": "النص تحت العنوان في صفحة التثبيت",
+    "message": "تم تثبيت الإضافة بنجاح."
+  },
+  "update_page_title": {
+    "description": "عنوان صفحة التحديث",
+    "message": "تم تحديث Dark Reader!"
+  },
+  "update_text_title": {
+    "description": "عنوان صفحة التحديث",
+    "message": "تم تحديث إضافة DarkReader"
+  },
+  "update_text_description": {
+    "description": "النص تحت العنوان",
+    "message": "تم تحديث الإضافة بنجاح."
+  },
+  "popup_terms_privacy": {
+    "message": "سياسة الخصوصية"
+  },
+  "popup_terms_text": {
+    "description": "النص لطلب من المستخدم قراءة سياسة الخصوصية",
+    "message": "يرجى قراءة <a href=\"https://sleezzi.github.io/DarkReader/Privacy\" target=\"_blank\">سياسة الخصوصية</a> قبل المتابعة."
+  },
+  "popup_terms_accept": {
+    "message": "أوافق"
+  },
+  "popup_terms_continue": {
+    "message": "متابعة."
+  },
+  "popup_website": {
+    "message": "الموقع"
+  },
+  "popup_type": {
+    "message": "النوع"
+  },
+  "popup_auto": {
+    "message": "تلقائي"
+  },
+  "popup_custom": {
+    "message": "مخصص"
+  },
+  "popup_style_author": {
+    "message": "الستايل من قبل"
+  },
+  "popup_error_unsupported_title": {
+    "description": "نص كبير ليقول أن الصفحة غير مدعومة بواسطة الإضافة",
+    "message": "DarkReader غير مدعومة على هذه الصفحة"
+  },
+  "popup_error_unsupported_description": {
+    "description": "النص الصغير ليقول أن الصفحة غير مدعومة بواسطة الإضافة",
+    "message": "لم يتم تحسين هذه الصفحة لـ DarkReader، لذا لا يعمل على هذا الموقع."
+  },
+  "popup_options_whitelist": {
+    "message": "القائمة البيضاء"
+  },
+  "popup_options_help_whitelist": {
+    "description": "النص 'ضع \"*\" لتمثيل عنصر غير معروف'",
+    "message": "وضع \"*\" لتمثيل عنصر غير معروف."
+  },
+  "popup_options_custom_only": {
+    "description": "النص لخيار العرض المخصص فقط",
+    "message": "تعديل الصفحات فقط مع دعم مخصص:"
+  }
+}

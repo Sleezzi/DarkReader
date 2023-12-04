@@ -114,11 +114,6 @@ body.terms #accept {
     font-size: 14px;
     text-align: right;
 }
-#active {
-    text-align: center;
-    color: white;
-    margin: 15px 0 15px 0;
-}
 .knobs, .layer {
     position: absolute;
     top: 0;
@@ -132,6 +127,9 @@ body.terms #accept {
     height: 18px;
     margin: -20px auto 0 auto;
     overflow: hidden;
+    text-align: center;
+    color: white;
+    margin: 15px 0 15px 0;
 }
 .button.r, .button.r .layer {
     border-radius: 100px;
@@ -155,7 +153,7 @@ body.terms #accept {
     transition: 0.3s ease all;
     z-index: 1;
 }
-#active .knobs:before {
+.button .knobs:before {
     content: "✕";
     position: absolute;
     top: 4px;
@@ -172,12 +170,12 @@ body.terms #accept {
     border-radius: 50%;
     transition: 0.3s cubic-bezier(0.18, 0.89, 0.35, 1.15) all;
 }
-#active .checkbox:checked + .knobs:before {
+.button .checkbox:checked + .knobs:before {
     content: "✓";
     left: 21px;
     background: #3ad330;
 }
-#active .knobs, #active .knobs:before, #active .layer {
+.button .knobs, .button .knobs:before, .button .layer {
     transition: 0.3s ease all;
 }
 a#options {

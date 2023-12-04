@@ -9,31 +9,31 @@
 <body class="dark">
     <div id="terms">
         <header>
-            <h1>Privacy</h1>
+            <h1 il8n="popup_terms_privacy">Privacy</h1>
         </header>
         <section>
-            <h2>DarkReader</h2>
-            <span>Please read the <a href="https://sleezzi.github.io/DarkReader/Privacy" target="_blank">Privacy Policy</a> before continuing.</p>
+            <h2 il8n="extension_name">DarkReader</h2>
+            <span il8n="popup_terms_text">Please read the <a href="https://sleezzi.github.io/DarkReader/Privacy" target="_blank">Privacy Policy</a> before continuing.</p></span>
             <div>
-              <label>
+              <label il8n="popup_terms_accept">
                 <input type="checkbox">I accept
               </label>
             </div>
-            <button style="cursor: not-allowed;" id="accept">Continue</button>
+            <button style="cursor: not-allowed;" id="accept" il8n="popup_terms_continue">Continue</button>
         </section>
     </div>
     <div id="popup">
         <div style="position: absolute;left: 15px;top: 0;">
-            <h1>DarkReader</h1>
+            <h1 il8n="extension_name">DarkReader</h1>
         </div>
-        <label id="name">Please wait...</label>
+        <label id="name">...</label>
         <div class="button r" id="active">
             <input type="checkbox" class="checkbox" checked/>
             <div class="knobs"></div>
             <div class="layer"></div>
         </div>
-        <label id="type">Please wait...</label>
-        <label id="author">Please wait...</label>
+        <label id="type">...</label>
+        <label id="author">...</label>
         <div style="position: absolute;right: 5px;bottom: 5px;">
             <a href="?options" target="_blank" id="options">
                 <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"viewBox="0 0 50 50" style="fill: #FFF;">
@@ -54,29 +54,40 @@
     <div id="error">
         <div class="message-container">
             <div class="warning-icon">&#9888;</div>
-            <h1>DarkReader is not supported on this page</h1>
-            <p>This page is not optimized for DarkReader. It is therefore not active on this site.</p>
+            <h1 il8n="popup_error_unsupported_title">DarkReader is not supported on this page</h1>
+            <p il8n="popup_error_unsupported_description">This page is not optimized for DarkReader. It is therefore not active on this site.</p>
         </div>
     </div>
     <div id="options">
         <div style="position: absolute;left: 15px;top: 0;">
-            <h1>DarkReader</h1>
+            <h1 il8n="extension_name">DarkReader</h1>
         </div>
         <div>
             <div>
-                <h1>Whitelist:</h1>
+                <h1 il8n="popup_options_whitelist">Whitelist:</h1>
             </div>
             <div>
-                <p>Put "*" to represent an unknown element</p>
+                <p il8n="popup_options_help_whitelist">Put "*" to represent an unknown element</p>
             </div>
             <div>
                 <textarea id="whitelist" cols="30" rows="1"></textarea>
                 <div>
-                    <button id="save" type="submit"><svg style="width: 100%; height: 100%;vertical-align: middle;fill: black;overflow: hidden;margin: 0;" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg"><path d="M730.584615 78.769231v267.815384c0 19.692308-15.753846 37.415385-37.415384 37.415385H273.723077c-19.692308 0-37.415385-15.753846-37.415385-37.415385V78.769231H157.538462C114.215385 78.769231 78.769231 114.215385 78.769231 157.538462v708.923076c0 43.323077 35.446154 78.769231 78.769231 78.769231h708.923076c43.323077 0 78.769231-35.446154 78.769231-78.769231V220.553846L803.446154 78.769231h-72.861539z m137.846154 750.276923c0 19.692308-15.753846 37.415385-37.415384 37.415384H194.953846c-19.692308 0-37.415385-15.753846-37.415384-37.415384V500.184615c0-19.692308 15.753846-37.415385 37.415384-37.415384h636.061539c19.692308 0 37.415385 15.753846 37.415384 37.415384v328.861539zM488.369231 267.815385c0 19.692308 15.753846 37.415385 37.415384 37.415384h90.584616c19.692308 0 37.415385-15.753846 37.415384-37.415384V78.769231h-163.446153l-1.969231 189.046154z"/></svg></button>
+                    <button id="save" type="submit">
+                        <svg style="width: 100%; height: 100%;vertical-align: middle;fill: black;overflow: hidden;margin: 0;" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M730.584615 78.769231v267.815384c0 19.692308-15.753846 37.415385-37.415384 37.415385H273.723077c-19.692308 0-37.415385-15.753846-37.415385-37.415385V78.769231H157.538462C114.215385 78.769231 78.769231 114.215385 78.769231 157.538462v708.923076c0 43.323077 35.446154 78.769231 78.769231 78.769231h708.923076c43.323077 0 78.769231-35.446154 78.769231-78.769231V220.553846L803.446154 78.769231h-72.861539z m137.846154 750.276923c0 19.692308-15.753846 37.415385-37.415384 37.415384H194.953846c-19.692308 0-37.415385-15.753846-37.415384-37.415384V500.184615c0-19.692308 15.753846-37.415385 37.415384-37.415384h636.061539c19.692308 0 37.415385 15.753846 37.415384 37.415384v328.861539zM488.369231 267.815385c0 19.692308 15.753846 37.415385 37.415384 37.415384h90.584616c19.692308 0 37.415385-15.753846 37.415384-37.415384V78.769231h-163.446153l-1.969231 189.046154z"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <div style="display: flex; width: 100%; align-items: center; justify-content: space-between;">
+                <span il8n="popup_options_custom_only" style="font-size: 13px;margin: 0 5px 0 0;">Edit only pages with custom support:</span>
+                <div class="button r" id="customOnly">
+                    <input type="checkbox" class="checkbox"/>
+                    <div class="knobs"></div>
+                    <div class="layer"></div>
                 </div>
             </div>
         </div>
-        
         <div style="position: absolute;right: 5px;bottom: 5px;">
             <a href="https://discord.gg/kzpUQaNqyV" target="_blank" id="discord">
                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="85%" height="85%" viewBox="0 -28.5 256 256" version="1.1" preserveAspectRatio="xMidYMid">
@@ -88,5 +99,6 @@
         </div>
     </div>
     <script src="/popup/popup.js"></script>
+    <script src="/js/translate.js"></script>
 </body>
 </html>

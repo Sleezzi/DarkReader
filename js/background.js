@@ -1,5 +1,7 @@
 let settings = {
 	terms: false,
+	customOnly: false,
+	currentTabId: 0,
 	whitelist: [ "sleezzi.github.io", "ext-twitch.tv" ]
 };
 
@@ -31,6 +33,7 @@ async function sendMessageToCurrentTab(message) {
   	const response = await chrome.tabs.sendMessage(tab.id, message);
 	return response;
 }
+
 
 chrome.runtime.onMessage.addListener(function (message, sender, sendResponse) {
 	if (`${message}`.startsWith("addWebsiteToWhiteList$website=")) {
@@ -78,12 +81,28 @@ chrome.runtime.onMessage.addListener(function (message, sender, sendResponse) {
 		chrome.storage.local.set({ "settings": settings });
 		return;
 	}
-	if (`${message}`.startsWith("termsIsAccepted")) {
+	if (`${message}` === "termsIsAccepted") {
 		sendResponse((settings.terms === true ? "Yes" : "No"));
 		return;
 	}
-	if (`${message}`.startsWith("termsAccept")) {
+	if (`${message}` === "termsAccept") {
 		settings.terms = true;
+		chrome.storage.local.set({ "settings": settings });
+		chrome.action.setIcon({ path: '/img/icon/Logo128.png' });
+		return;
+	}
+	if (`${message}`.startsWith("getCustomOnly")) {
+		sendResponse((settings.customOnly ? "Yes" : "No"));
+		return;
+	}
+	if (`${message}`.startsWith("changeCustomOnly")) {
+		if (settings.customOnly) {
+			settings.customOnly = false
+			sendResponse("No");
+		} else {
+			settings.customOnly = true;
+			sendResponse("Yes");
+		}
 		chrome.storage.local.set({ "settings": settings });
 		return;
 	}
@@ -92,10 +111,55 @@ chrome.runtime.onMessage.addListener(function (message, sender, sendResponse) {
 
 chrome.runtime.onInstalled.addListener(async ({ reason }) => {
 	if (reason === 'install') {
+		chrome.action.setIcon({ path: '/img/icon/LogoDisable.png' });
 		chrome.tabs.create({url: 'installed.html'});
 		createNotification("install", "DarkReader", "Tanks for download our extension", "/img/icon/Logo.png", true);
 	} else if (reason === "update") {
 		chrome.tabs.create({url: 'updated.html'});
 		createNotification("update", "DarkReader", "We made a update", "/img/icon/Logo.png", true);
+	}
+});
+
+chrome.tabs.onActivated.addListener(async activeInfo => {
+	const tabId = activeInfo.tabId;
+	if (!tabId) return;
+	let whitelisted;
+	const tab = await chrome.tabs.get(tabId);
+	settings.whitelist.forEach(url => {
+		if (whitelisted !== false && RegExp(`^${url.replace(/\./g, "\\.").replace(/\*/g, ".*").replace("@@", "")}$`).test(clearURL(new URL(`${tab.url}`).hostname))) {
+			if (url.startsWith("@@")) {
+				return whitelisted = false;
+			} else {
+				whitelisted = true;
+			}
+		}
+	});
+	if (whitelisted) {
+		chrome.action.setIcon({ tabId, path: '/img/icon/LogoDisable.png' });
+	} else {
+		chrome.action.setIcon({ tabId, path: '/img/icon/Logo128.png' });
+	};
+});
+
+chrome.commands.onCommand.addListener(async command => {
+	if (command === "toggle_enable") {
+		const [tab] = await chrome.tabs.query({ active: true, lastFocusedWindow: true });
+		const tabId = tab.id;
+		if (!tab || !tabId) return;
+		let finded;
+		settings.whitelist.forEach(url => {
+			if (!url.startsWith("@@") && RegExp(`^${url.replace(/\./g, "\\.").replace(/\*/g, ".*").replace("@@", "")}$`).test(clearURL(new URL(tab.url).hostname))) {
+				settings.whitelist.splice(settings.whitelist.indexOf(url));
+				chrome.action.setIcon({ tabId, path: '/img/icon/LogoDisable.png' });
+				finded = true;
+			}
+		});
+		if (!finded) {
+			settings.whitelist.push(clearURL(new URL(tab.url).hostname));
+			chrome.action.setIcon({ tabId, path: '/img/icon/Logo128.png' });
+		}
+		chrome.storage.local.set({ "settings": settings });
+		sendMessageToCurrentTab("reload");
+		return;
 	}
 });

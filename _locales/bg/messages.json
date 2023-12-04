@@ -1,0 +1,89 @@
+{
+  "extension_name": {
+    "description": "Името на разширението",
+    "message": "DarkReader"
+  },
+  "extension_short_name": {
+    "description": "Краткото име на разширението",
+    "message": "Dark"
+  },
+  "extension_description": {
+    "description": "Описанието на разширението",
+    "message": "Възползвайте се от уеб страниците в тъмен режим. DarkReader поддържа определени уеб сайтове по индивидуален начин!"
+  },
+  "extension_command": {
+    "description": "Die Tastenkombination zum Aktivieren/Deaktivieren der Erweiterung",
+    "message": "Активирайте/деактивирайте разширението на уебсайт"
+  },
+  "install_page_title": {
+    "description": "Заглавието на страницата за инсталиране",
+    "message": "DarkReader инсталиран!"
+  },
+  "install_text_title": {
+    "description": "Заглавието на текста на страницата за инсталиране",
+    "message": "Разширението DarkReader е инсталирано!"
+  },
+  "install_text_description": {
+    "description": "Текстът под заглавието на страницата за инсталиране",
+    "message": "Разширението е инсталирано успешно."
+  },
+  "update_page_title": {
+    "description": "Заглавието на страницата за обновяване",
+    "message": "Dark Reader актуализиран!"
+  },
+  "update_text_title": {
+    "description": "Заглавието на страницата за обновяване",
+    "message": "Разширението DarkReader е актуализирано"
+  },
+  "update_text_description": {
+    "description": "Текстът под заглавието",
+    "message": "Разширението е актуализирано успешно."
+  },
+  "popup_terms_privacy": {
+    "message": "Политика за поверителност"
+  },
+  "popup_terms_text": {
+    "description": "Текстът, който кара потребителя да прочете политиката за поверителност",
+    "message": "Моля, прочетете нашата <a href=\"https://sleezzi.github.io/DarkReader/Privacy\" target=\"_blank\">Политика за поверителност</a> преди да продължите."
+  },
+  "popup_terms_accept": {
+    "message": "Приемам"
+  },
+  "popup_terms_continue": {
+    "message": "Продължи."
+  },
+  "popup_website": {
+    "message": "Уебсайт"
+  },
+  "popup_type": {
+    "message": "Тип"
+  },
+  "popup_auto": {
+    "message": "Автоматично"
+  },
+  "popup_custom": {
+    "message": "Персонализирано"
+  },
+  "popup_style_author": {
+    "message": "Стил от"
+  },
+  "popup_error_unsupported_title": {
+    "description": "Голям текст, който казва, че страницата не се поддържа от разширението",
+    "message": "DarkReader не се поддържа на тази страница"
+  },
+  "popup_error_unsupported_description": {
+    "description": "Малък текст, който казва, че страницата не се поддържа от разширението",
+    "message": "Тази страница не е оптимизирана за DarkReader, затова не е активен на този сайт."
+  },
+  "popup_options_whitelist": {
+    "message": "Бял списък"
+  },
+  "popup_options_help_whitelist": {
+    "description": "Текстът 'Поставете \"*\" за представяне на неизвестен елемент'",
+    "message": "Поставете \"*\" за представяне на неизвестен елемент."
+  },
+  "popup_options_custom_only": {
+    "description": "Текст за опцията само персонализирано",
+    "message": "Променете само страници с персонализирана поддръжка:"
+  }
+}
