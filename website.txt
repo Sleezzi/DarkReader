@@ -19,7 +19,7 @@
 #Google Classroom|+classroom.google.*|@Lekrkoekj|$https://sleezzi.github.io/DarkReader/website/classroom.google.*.css|
 ! Other
 #Atlassian|+*.atlassian.net|@Robert Parker|$https://sleezzi.github.io/DarkReader/website/*.atlassian.net.css|
-#VoirAnime|+*voiranime.com|@Sleezzi %owner%|$https://sleezzi.github.io/DarkReader/website/voiranime.com.css|
+#VoirAnime|+v*.voiranime.com|@Sleezzi %owner%|$https://sleezzi.github.io/DarkReader/website/v*.voiranime.com.css|
 #OpenAI|+*openai.com|@Sleezzi %owner%|$https://sleezzi.github.io/DarkReader/website/openai.com.css|
 #Roblox|+roblox.com|@Sleezzi %owner%|$https://sleezzi.github.io/DarkReader/website/roblox.com.css|
 #YouTube|+youtube.*|@Sleezzi %owner%|$https://sleezzi.github.io/DarkReader/website/youtube.*.css|
