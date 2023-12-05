@@ -20,6 +20,8 @@ function clearURL(url) {
     if (!/^(https?|ftp):\/\/([^\s/$.?#].[^\s]*)$/.test(window.location.href)) return console.log(`DarkReader can't work on ${website}`);
     response = await chrome.runtime.sendMessage(`isInWhiteList$website=${website}`);
     if (response === "Yes") return console.warn(`You have disabled DarkReader on "${website}"`, response);
+    response = await chrome.runtime.sendMessage(`getCustomOnly`);
+    if (response === "Yes") return console.warn(`DarkReader is disabled on "${website}" because it does not support it in a custom way and you have enabled the custom only option`, response);
     try {
         response = await fetch(`https://sleezzi.github.io/DarkReader/website.txt`, { method: "GET", cache: "no-store" });
         let finded = false;
