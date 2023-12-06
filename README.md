@@ -9,6 +9,4 @@
     <li><a href="https://github.com/Sleezzi/YouTubeBookmarkExtension" target="_blank" rel="noopener noreferrer">YouTube Bookmark</a></li>
 </ul>
 <h4 style="text-align: center;">Author</h4>
-<a href="https://github.com/Sleezzi" class="Sleezzi" target="_blank">
-    <h4>Sleezzi</h4>
-</a>
+<a href="https://github.com/Sleezzi" class="Sleezzi" target="_blank">Sleezzi</a>
