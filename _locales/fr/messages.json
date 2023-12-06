@@ -80,7 +80,11 @@
   },
   "popup_options_help_whitelist": {
     "description": "The text 'Put \"*\" to represent an unknown element'",
-    "message": "Met \"*\" pour représenter un élément inconnu."
+    "message": "Mettez \"*\" pour représenter un élément inconnu."
+  },
+  "popup_options_help_whitelist_2": {
+    "description": "The text 'Put \"@@\" to represent a not whitelisted element'",
+    "message": "Mettez \"@@\" pour représenter un élément non-whitelisté"
   },
   "popup_options_custom_only": {
     "description": "The text for the option on custom only",

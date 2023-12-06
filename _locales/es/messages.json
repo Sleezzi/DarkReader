@@ -82,6 +82,10 @@
     "description": "El texto 'Pon \"*\" para representar un elemento desconocido'",
     "message": "Pon \"*\" para representar un elemento desconocido."
   },
+  "popup_options_help_whitelist_2": {
+    "description": "El texto 'Pon \"@@\" para representar un elemento no incluido en la lista blanca'",
+    "message": "Pon \"@@\" para representar un elemento no incluido en la lista blanca"
+  },
   "popup_options_custom_only": {
     "description": "El texto para la opción de solo personalizado",
     "message": "Modificar solo páginas con soporte personalizado:"

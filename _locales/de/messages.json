@@ -82,6 +82,10 @@
     "description": "Der Text 'Setze \"*\" um ein unbekanntes Element darzustellen'",
     "message": "Setze \"*\" um ein unbekanntes Element darzustellen."
   },
+  "popup_options_help_whitelist_2": {
+    "description": "The text 'Put \"@@\" to represent a not whitelisted element'",
+    "message": "Setzen Sie \"@@\" ein, um ein Element darzustellen, das nicht auf der Whitelist steht."
+  },
   "popup_options_custom_only": {
     "description": "Der Text für die Option nur benutzerdefiniert",
     "message": "Ändere nur Seiten mit benutzerdefinierter Unterstützung:"

@@ -82,6 +82,10 @@
     "description": "The text 'Put \"*\" to represent an unknown element'",
     "message": "Put \"*\" to represent an unknown element."
   },
+  "popup_options_help_whitelist_2": {
+    "description": "The text 'Put \"@@\" to represent a not whitelisted element'",
+    "message": "Put \"@@\" to represent a not whitelisted element"
+  },
   "popup_options_custom_only": {
     "description": "The text for the option on custom only",
     "message": "Modify only pages with custom support:"
