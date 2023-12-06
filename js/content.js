@@ -1,8 +1,22 @@
 let response;
+let isActive = true;
+const website = clearURL(window.location.hostname);
 
 chrome.runtime.onMessage.addListener(function (message, sender, sendResponse) {
     if (`${message}` === "reload") {
-        window.location.reload();
+        document.querySelectorAll("#DarkReaderStyle").forEach(element => {
+            if (isActive) {
+                isActive = false;
+                if (element.tagName === "style") {
+                    element.type = "text";
+                } else element.rel = "text";
+            } else {
+                isActive = true;
+                if (element.tagName === "style") {
+                    element.removeAttribute(type);
+                } else element.rel = "stylesheet";
+            }
+        });
     }
 });
 
@@ -13,41 +27,82 @@ function clearURL(url) {
 	return url;
 }
 
-(async () => {
-    response = await chrome.runtime.sendMessage(`termsIsAccepted`);
-    if (response !== "Yes") return;
-    const website = clearURL(window.location.hostname);
-    if (!/^(https?|ftp):\/\/([^\s/$.?#].[^\s]*)$/.test(window.location.href)) return console.log(`DarkReader can't work on ${website}`);
-    response = await chrome.runtime.sendMessage(`isInWhiteList$website=${website}`);
-    if (response === "Yes") return console.warn(`You have disabled DarkReader on "${website}"`, response);
-    try {
-        response = await fetch(`https://sleezzi.github.io/DarkReader/website.txt`, { method: "GET", cache: "no-store" });
-        let finded = false;
-        if (response.status !== 200) throw new Error("Unable to make request: Invalid URL");
-        console.log("DarkReader was here :)");
-        response = await response.text();
-        for (const line of response.split('\n')) {
-            if (line.trim() === '' || line.trim().startsWith('!')) continue;
-            const url = line.match(/\+(.*?)\|/);
-            const styleURL = line.match(/\$(.*?)\|/);
-            const name = line.match(/\#(.*?)\|/);
-            const author = line.match(/\@(.*?)\|/);
-            if (!url || !url[1] ||
-            !RegExp(`^${url[1].replace(/\./g, "\\.").replace(/\*/g, ".*")}$`).test(website) ||
-            !name || !name[1] ||
-            !author || !author[1] ||
-            !styleURL || !styleURL[1]) continue;
-            finded = true;
-            const style = document.createElement("link");
-            style.rel = "stylesheet";
-            style.href = styleURL[1];
-            document.head.appendChild(style);
-        }
-        if (!finded) {
-            response = await chrome.runtime.sendMessage(`getCustomOnly`);
-            if (response === "Yes") return console.warn(`DarkReader is disabled on "${website}" because it does not support it in a custom way and you have enabled the custom only option`, response);
-            const style = document.createElement("style");
-            style.innerHTML = `
+function trowError(err) {
+    const popup = document.createElement("DarkReaderDiv");
+    popup.innerHTML = `
+<style>
+#DarkReader.popup-container {ole="main"], div#page, div[data-role="page"], div[role="page"] {
+    background: #333 !important;
+
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+#DarkReader.popup-content {
+    background: #fff;
+    padding: 20px;
+    color: black;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    position: relative;
+}
+
+#DarkReader.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    color: red;
+}
+
+#DarkReader.popup-content > h1 {
+    position: absolute;
+    top: 0px;
+    margin: 5px 0 0 0;
+}
+
+#DarkReader.popup-content > p {
+    margin: 30px 0 0 0;
+}
+#DarkReader.popup-content > a {
+    color: #1d5acd;
+}
+#DarkReader.popup-content > a:hover {
+    color: #007bff;
+}
+</style>
+<div class="popup-container" id="DarkReader">
+<div id="DarkReader" class="popup-content">
+    <h1>DarkReader</h1>
+    <button class="close-btn" id="DarkReader" alt="Ignore">&times;</button>
+    <p>It appears that DarkReader is not working on "${website}". This may be due to an AdBlocker</p>
+    <a target="_blank" href="https://sleezzi.github.io/DarkReader/AdBlock">Click here to find out how to fix it</a>
+</div>
+</div>`;
+    document.body.appendChild(popup);
+    document.querySelector("#DarkReader.close-btn").onclick = function() {
+        document.querySelector('#DarkReader.popup-container').style.display = 'none';
+        chrome.runtime.sendMessage(`addWebsiteToWhiteList$website=${website}`);
+        window.location.reload();
+    }
+    console.error(err);
+}
+
+function useDefault() {
+    const style = document.createElement("style");
+    style.id = "DarkReaderStyle";
+    if (!isActive) style.type = "text";
+    style.innerHTML = `
 body, main, #main, #container-main, #main-frame, div[data-role="main"], div[role="main"], div#page, div[data-role="page"], div[role="page"] {
     background: #333 !important;
     color: white !important;
@@ -56,7 +111,51 @@ iframe body {
     background: inerit;
     color: inerit;
 }`;
-            document.head.appendChild(style);
+    document.head.appendChild(style);
+}
+
+
+(async () => {
+    response = await chrome.runtime.sendMessage(`termsIsAccepted`);
+    if (response !== "Yes") return;
+    if (!/^(https?|ftp):\/\/([^\s/$.?#].[^\s]*)$/.test(window.location.href)) return console.log(`DarkReader can't work on ${website}`);
+    response = await chrome.runtime.sendMessage(`isInWhiteList$website=${website}`);
+    if (response === "Yes") {
+        console.warn(`You have disabled DarkReader on "${website}"`, response);
+        isActive = false;
+    }
+    console.log("DarkReader was here :)");
+    try {
+        response = await fetch(`https://sleezzi.github.io/DarkReader/website.txt`, { method: "GET", cache: "no-store" });
+        let finded = false;
+        if (response.status === 200) {
+            response = await response.text();
+            for (const line of response.split('\n')) {
+                if (line.trim() === '' || line.trim().startsWith('!')) continue;
+                const url = line.match(/\+(.*?)\|/);
+                const styleURL = line.match(/\$(.*?)\|/);
+                const name = line.match(/\#(.*?)\|/);
+                const author = line.match(/\@(.*?)\|/);
+                if (!url || !url[1] ||
+                !RegExp(`^${url[1].replace(/\./g, "\\.").replace(/\*/g, ".*")}$`).test(website) ||
+                !name || !name[1] ||
+                !author || !author[1] ||
+                !styleURL || !styleURL[1]) continue;
+                finded = true;
+                const style = document.createElement("link");
+                style.id = "DarkReaderStyle";
+                style.rel = isActive === true ? "stylesheet" : "text";
+                style.href = styleURL[1];
+                document.head.appendChild(style);
+            }
+            if (!finded) {
+                response = await chrome.runtime.sendMessage(`getCustomOnly`);
+                if (response === "Yes") return console.warn(`DarkReader is disabled on "${website}" because it does not support it in a custom way and you have enabled the custom only option`, response);
+                useDefault();
+            }
+        } else {
+            useDefault();
+            trowError("Unable to make request: Invalid URL");
         }
         const Discord = document.createElement("DarkReaderDiv");
         Discord.innerHTML = `
@@ -80,7 +179,9 @@ iframe body {
         color: white
     }
     #discord.DarkReader:hover > svg {
-        transform: rotateY(360deg);
+        transform: rotateY(360deg);ole="main"], div#page, div[data-role="page"], div[role="page"] {
+            background: #333 !important;
+        
     }
 </style>
 <div class="DarkReader buttonContainer">
@@ -94,70 +195,7 @@ iframe body {
 </div>`;
         document.body.appendChild(Discord);
     } catch(err) {
-        const popup = document.createElement("DarkReaderDiv");
-        popup.innerHTML = `
-<style>
-    #DarkReader.popup-container {
-        display: flex;
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(0, 0, 0, 0.5);
-        justify-content: center;
-        align-items: center;
-    }
-
-    #DarkReader.popup-content {
-        background: #fff;
-        padding: 20px;
-        color: black;
-        border-radius: 5px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-        position: relative;
-    }
-
-    #DarkReader.close-btn {
-        position: absolute;
-        top: 10px;
-        right: 10px;
-        font-size: 20px;
-        cursor: pointer;
-        background: none;
-        border: none;
-        color: red;
-    }
-
-    #DarkReader.popup-content > h1 {
-        position: absolute;
-        top: 0px;
-        margin: 5px 0 0 0;
-    }
-    
-    #DarkReader.popup-content > p {
-        margin: 30px 0 0 0;
-    }
-    #DarkReader.popup-content > a {
-        color: #1d5acd;
-    }
-    #DarkReader.popup-content > a:hover {
-        color: #007bff;
-    }
-</style>
-<div class="popup-container" id="DarkReader">
-    <div id="DarkReader" class="popup-content">
-        <h1>DarkReader</h1>
-        <button class="close-btn" id="DarkReader" alt="Ignore">&times;</button>
-        <p>It appears that DarkReader is not working on "${website}". This may be due to an AdBlocker</p>
-        <a target="_blank" href="https://sleezzi.github.io/DarkReader/AdBlock">Click here to find out how to fix it</a>
-    </div>
-</div>`;
-        document.body.appendChild(popup);
-        document.querySelector("#DarkReader.close-btn").onclick = function() {
-            document.querySelector('#DarkReader.popup-container').style.display = 'none';
-            chrome.runtime.sendMessage(`addWebsiteToWhiteList$website=${website}`);
-        }
-        console.error(err);
+        useDefault();
+        trowError(err);
     }
 })();

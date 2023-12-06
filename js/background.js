@@ -34,23 +34,26 @@ async function sendMessageToCurrentTab(message) {
 	return response;
 }
 
+function addURLInWhitlist(website, callback) {
+	let finded;
+	settings.whitelist.forEach(url => {
+		if (!url.startsWith("@@") && RegExp(`^${url.replace(/\./g, "\\.").replace(/\*/g, ".*").replace("@@", "")}$`).test(website)) {
+			finded = true;
+			settings.whitelist.splice(settings.whitelist.indexOf(url));
+			callback("Yes");
+		}
+	});
+	if (!finded) {
+		settings.whitelist.push(website);
+		callback("No");
+	}
+	chrome.storage.local.set({ "settings": settings });
+	sendMessageToCurrentTab("reload");
+}
 
 chrome.runtime.onMessage.addListener(function (message, sender, sendResponse) {
 	if (`${message}`.startsWith("addWebsiteToWhiteList$website=")) {
-		let finded;
-		settings.whitelist.forEach(url => {
-			if (!url.startsWith("@@") && RegExp(`^${url.replace(/\./g, "\\.").replace(/\*/g, ".*").replace("@@", "")}$`).test(`${message}`.replace("addWebsiteToWhiteList$website=", ""))) {
-				settings.whitelist.splice(settings.whitelist.indexOf(url));
-				sendResponse("Yes");
-				finded = true;
-			}
-		});
-		if (!finded) {
-			settings.whitelist.push(`${message}`.replace("addWebsiteToWhiteList$website=", ""));
-			sendResponse("No");
-		}
-		chrome.storage.local.set({ "settings": settings });
-		sendMessageToCurrentTab("reload");
+		addURLInWhitlist(`${message}`.replace("addWebsiteToWhiteList$website=", ""), resp => sendResponse(resp));
 		return;
 	}
 	if (`${message}`.startsWith("isInWhiteList$website=")) {
@@ -97,7 +100,7 @@ chrome.runtime.onMessage.addListener(function (message, sender, sendResponse) {
 	}
 	if (`${message}`.startsWith("changeCustomOnly")) {
 		if (settings.customOnly) {
-			settings.customOnly = false
+			settings.customOnly = false;
 			sendResponse("No");
 		} else {
 			settings.customOnly = true;
@@ -138,35 +141,26 @@ const changeIconOnTabUpdate = async function(activeInfo) {
 	} else {
 		chrome.action.setIcon({ tabId, path: '/img/icon/Logo128.png' });
 	}
-}
+};
 
-chrome.tabs.onActivated.addListener(changeIconOnTabUpdate());
+
+chrome.tabs.onActivated.addListener(changeIconOnTabUpdate);
 chrome.tabs.onUpdated.addListener(function(...args) {
-	changeIconOnTabUpdate({
-		tabId: args[2].id
-	});
-	console.log(args);
+	if (args[2].status === "complete") changeIconOnTabUpdate({ tabId: args[2].id });
 });
 
 chrome.commands.onCommand.addListener(async command => {
 	if (command === "toggle_enable") {
 		const [tab] = await chrome.tabs.query({ active: true, lastFocusedWindow: true });
-		const tabId = tab.id;
-		if (!tab || !tabId) return;
-		let finded;
-		settings.whitelist.forEach(url => {
-			if (!url.startsWith("@@") && RegExp(`^${url.replace(/\./g, "\\.").replace(/\*/g, ".*").replace("@@", "")}$`).test(clearURL(new URL(tab.url).hostname))) {
-				settings.whitelist.splice(settings.whitelist.indexOf(url));
+		if (!tab || !tab.id) return;
+		addURLInWhitlist(clearURL(new URL(tab.url).hostname), function(resp) {
+			const tabId = tab.id;
+			if (resp === "No") {
 				chrome.action.setIcon({ tabId, path: '/img/icon/LogoDisable.png' });
-				finded = true;
+			} else {
+				chrome.action.setIcon({ tabId, path: '/img/icon/Logo128.png' });
 			}
 		});
-		if (!finded) {
-			settings.whitelist.push(clearURL(new URL(tab.url).hostname));
-			chrome.action.setIcon({ tabId, path: '/img/icon/Logo128.png' });
-		}
-		chrome.storage.local.set({ "settings": settings });
-		sendMessageToCurrentTab("reload");
 		return;
 	}
 });
