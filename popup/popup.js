@@ -76,11 +76,9 @@ function clearURL(url) {
                 if (!tabs || !tabs[0] || !tabs[0].url || !/^(https?|ftp):\/\/([^\s/$.?#].[^\s]*)$/.test(tabs[0].url)) return document.body.classList.add("error");
                 // Set On if the extension is active
                 response = await fetch(`https://sleezzi.github.io/DarkReader/website.txt`, { method: "GET", cache: "no-store" });
-                if (response.status !== 200) throw new Error("Unable to make request: Invalid URL");
+                if (response.status !== 200) throw new Error(`Unable to make request: ${response.statusText} (code: ${response.status})`);
+                let finded;
                 response = await response.text();
-                document.querySelector("label#name").innerHTML = `${chrome.i18n.getMessage("popup_website")}: ${clearURL(new URL(tabs[0].url).hostname)}`;
-                document.querySelector("label#author").innerHTML = `${chrome.i18n.getMessage("popup_style_author")}: <b>Sleezzi</b> <span aria-label=\"Made by the Owner\" class=\"owner\">✓</span>`;
-                document.querySelector("label#type").innerHTML = `${chrome.i18n.getMessage("popup_type")}: ${chrome.i18n.getMessage("popup_auto")}`;
                 for (const line of response.split('\n')) {
                     if (line.trim() === '' || line.trim().startsWith('!')) continue;
                     const url = line.match(/\+(.*?)\|/);
@@ -95,14 +93,18 @@ function clearURL(url) {
                     document.querySelector("label#name").innerHTML = `${chrome.i18n.getMessage("popup_website")}: ${name[1]}`;
                     document.querySelector("label#author").innerHTML = `${chrome.i18n.getMessage("popup_style_author")}: <b>${author[1].replaceAll("%verified%", "</b><span aria-label=\"Verified user\" class=\"verified\">✓</span><b>").replaceAll("%owner%", "</b><span aria-label=\"Made by the Owner\" class=\"owner\">✓</span><b>").replaceAll("&", "</b>&<b>")}</b>`;
                     document.querySelector("label#type").innerHTML = `${chrome.i18n.getMessage("popup_type")}: <b>${chrome.i18n.getMessage("popup_custom")}</b>`;
+                    finded = true;
                     break;
                 }
                 response = await chrome.runtime.sendMessage(`isInWhiteList$website=${clearURL(new URL(tabs[0].url).hostname)}`);
-                if (response === "Yes") {
-                    document.querySelector("#active > input").removeAttribute("checked");
-                } else {
-                    document.querySelector("#active > input").setAttribute("checked", true);
-                }
+                if (response !== "Yes") document.querySelector("#active > input").setAttribute("checked", true);
+                if (!finded) {
+                    document.querySelector("label#name").innerHTML = `${chrome.i18n.getMessage("popup_website")}: ${clearURL(new URL(tabs[0].url).hostname)}`;
+                    document.querySelector("label#author").innerHTML = `${chrome.i18n.getMessage("popup_style_author")}: <b>Sleezzi</b> <span aria-label=\"Made by the Owner\" class=\"owner\">✓</span>`;
+                    document.querySelector("label#type").innerHTML = `${chrome.i18n.getMessage("popup_type")}: ${chrome.i18n.getMessage("popup_auto")}`;
+                    response = await chrome.runtime.sendMessage(`getCustomOnly`);
+                    if (response === "Yes") document.querySelector("#active > input").removeAttribute("checked");
+                } else console.log(finded);
                 // Set ON/OFF
                 document.getElementById("active").onmouseup = async function() {
                     response = await chrome.runtime.sendMessage(`addWebsiteToWhiteList$website=${clearURL(new URL(tabs[0].url).hostname)}`);

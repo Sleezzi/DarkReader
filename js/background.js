@@ -119,8 +119,7 @@ chrome.runtime.onInstalled.addListener(async ({ reason }) => {
 		createNotification("update", "DarkReader", "We made a update", "/img/icon/Logo.png", true);
 	}
 });
-
-chrome.tabs.onActivated.addListener(async activeInfo => {
+const changeIconOnTabUpdate = async function(activeInfo) {
 	const tabId = activeInfo.tabId;
 	if (!tabId) return;
 	let whitelisted;
@@ -138,7 +137,15 @@ chrome.tabs.onActivated.addListener(async activeInfo => {
 		chrome.action.setIcon({ tabId, path: '/img/icon/LogoDisable.png' });
 	} else {
 		chrome.action.setIcon({ tabId, path: '/img/icon/Logo128.png' });
-	};
+	}
+}
+
+chrome.tabs.onActivated.addListener(changeIconOnTabUpdate());
+chrome.tabs.onUpdated.addListener(function(...args) {
+	changeIconOnTabUpdate({
+		tabId: args[2].id
+	});
+	console.log(args);
 });
 
 chrome.commands.onCommand.addListener(async command => {
