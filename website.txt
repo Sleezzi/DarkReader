@@ -1,6 +1,6 @@
 ! ⚠ Please report any problems ⚠
 ! in the Discord (https://discord.gg/kzpUQaNqyV)
-! or via e-mail (sleezzi.contact@gmail.com).
+! or via e-mail (sleezzi.contact@gmail.com)
 
 ! Made by Sleezzi for DarkReader Extension
 
@@ -20,8 +20,9 @@
 ! ---------------------------------------- [?] -------------------------------------------- !
 
 ! /‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾\ !
-!|                ⚠︎ Don't put "%owner" or "%verified%" in the author name ⚠︎                |
-!|                    ⚠︎ Don't touch the other work without permission ⚠︎                    |
+!|                ⚠︎ Don't put "%owner" or "%verified%" in the author name ⚠︎                |!
+!|                    ⚠︎ Don't touch the other work without permission ⚠︎                    |!
+!|                             ⚠ Please report any problems ⚠                              |!
 ! \_______________________________________________________________________________________/ !
 
 
