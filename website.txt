@@ -28,13 +28,13 @@
 
 
 ! /‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾\ Style Part /‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾\ !
-! Google website
+! ---------------------------------| Google website |-------------------------------------- !
 #Google|+google.*|@Sleezzi %owner%|$https://sleezzi.github.io/DarkReader/website/google.*.css|
 #YouTube|+youtube.*|@Sleezzi %owner%|$https://sleezzi.github.io/DarkReader/website/youtube.*.css|
 #Google Calendar|+calendar.google.*|@Lekrkoekj|$https://sleezzi.github.io/DarkReader/website/calendar.google.*.css|
 #GMail|+mail.google.*|@Globex Designs, Inc.|$https://sleezzi.github.io/DarkReader/website/mail.google.*.css|
 #Google Classroom|+classroom.google.*|@Lekrkoekj|$https://sleezzi.github.io/DarkReader/website/classroom.google.*.css|
-! Other
+! ---------------------------------------| Other |----------------------------------------- !
 #ENT - Ile de France|+*iledefrance.fr|@Sleezzi %owner%|$https://sleezzi.github.io/DarkReader/website/iledefrance.fr.css|
 #Pronote|+*index-education.net|@Sleezzi %owner%|$https://sleezzi.github.io/DarkReader/website/index-education.net.css|
 #Numworks|+numworks.*|@Sleezzi %owner%|$https://sleezzi.github.io/DarkReader/website/numworks.com.css|
@@ -44,7 +44,7 @@
 #Roblox|+roblox.com|@Sleezzi %owner%|$https://sleezzi.github.io/DarkReader/website/roblox.com.css|
 #Spotify|+open.spotify.*|@Sleezzi %owner%|$https://sleezzi.github.io/DarkReader/website/spotify.*.css|
 #Amazon (BETA)|+amazon.*|@sleepin|$https://sleezzi.github.io/DarkReader/website/amazon.*.css|
-! Wikipedia
+! ------------------------------------| Wikipedia |---------------------------------------- !
 #Wikipedia|+*wikipedia.*|@n0x|$https://sleezzi.github.io/DarkReader/website/*wikipedia.*.css|
 #Wikipedia FR|+fr.wikipedia.*|@n0x|$https://sleezzi.github.io/DarkReader/website/fr.wikipedia.*.css|
 #Wikipedia|+m.wikipedia.*|@n0x|$https://sleezzi.github.io/DarkReader/website/m.wikipedia.*.css|
