@@ -45,4 +45,4 @@
 #Wikipedia|+*wikipedia.*|@n0x|$https://sleezzi.github.io/DarkReader/website/*wikipedia.*.css|
 #Wikipedia FR|+fr.wikipedia.*|@n0x|$https://sleezzi.github.io/DarkReader/website/fr.wikipedia.*.css|
 #Wikipedia|+m.wikipedia.*|@n0x|$https://sleezzi.github.io/DarkReader/website/m.wikipedia.*.css|
-! \______________________________________/ END \_________________________________________/ !
+! \_______________________________________/ END \_________________________________________/ !
