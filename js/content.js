@@ -3,20 +3,21 @@ let isActive = true;
 const website = clearURL(window.location.hostname);
 
 chrome.runtime.onMessage.addListener(function (message, sender, sendResponse) {
-    if (`${message}` === "reload") {
+    if (`${message}` === "disable") {
         document.querySelectorAll("#DarkReaderStyle").forEach(element => {
-            if (isActive) {
-                isActive = false;
-                if (element.tagName === "style") {
-                    element.type = "text";
-                } else element.rel = "text";
-            } else {
-                isActive = true;
-                if (element.tagName === "style") {
-                    element.removeAttribute(type);
-                } else element.rel = "stylesheet";
-            }
+            if (element.tagName === "style") {
+                element.type = "text";
+            } else element.rel = "text";
         });
+        document.querySelector("DarkReaderDiv").style.display = "none";
+    }
+    if (`${message}` === "enable") {
+        document.querySelectorAll("#DarkReaderStyle").forEach(element => {
+            if (element.tagName === "style") {
+                element.removeAttribute(type);
+            } else element.rel = "stylesheet";
+        });
+        document.querySelector("DarkReaderDiv").style.display = "block";
     }
 });
 

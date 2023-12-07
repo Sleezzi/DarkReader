@@ -41,14 +41,15 @@ function addURLInWhitlist(website, callback) {
 			finded = true;
 			settings.whitelist.splice(settings.whitelist.indexOf(url));
 			callback("Yes");
+			sendMessageToCurrentTab("enable");
 		}
 	});
 	if (!finded) {
 		settings.whitelist.push(website);
 		callback("No");
+		sendMessageToCurrentTab("disable");
 	}
 	chrome.storage.local.set({ "settings": settings });
-	sendMessageToCurrentTab("reload");
 }
 
 chrome.runtime.onMessage.addListener(function (message, sender, sendResponse) {
@@ -127,6 +128,7 @@ const changeIconOnTabUpdate = async function(activeInfo) {
 	if (!tabId) return;
 	let whitelisted;
 	const tab = await chrome.tabs.get(tabId);
+	if (!/^(https?|ftp):\/\/([^\s/$.?#].[^\s]*)$/.test(tab.url)) return chrome.action.setIcon({ tabId, path: '/img/icon/LogoDisable.png' });
 	settings.whitelist.forEach(url => {
 		if (whitelisted !== false && RegExp(`^${url.replace(/\./g, "\\.").replace(/\*/g, ".*").replace("@@", "")}$`).test(clearURL(new URL(`${tab.url}`).hostname))) {
 			if (url.startsWith("@@")) {
