@@ -3,6 +3,7 @@
 ! or via e-mail (sleezzi.contact@gmail.com)
 
 ! Made by Sleezzi for DarkReader Extension
+!    Please try to make this page as beautiful as possible.
 
 ! Homepage: https://sleezzi.github.io/DarkReader
 ! GitHub issues: https://github.com/Sleezzi/DarkReader/issues
@@ -12,7 +13,7 @@
 ! Your elements must not contain "#+@$|"
 ! Put "*" to represent an unknown element.
 ! Put a "!" at the beginning of the line to make a comment (DarkReader will ignore this line)
-! Exemple:
+! -- Exemple:
 ! Name: #NAME|
 ! Supported site: +WEBSITE.COM|
 ! The author of the style: @YOURNAME|
