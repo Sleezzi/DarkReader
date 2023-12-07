@@ -14,6 +14,7 @@
 #Numworks|+numworks.com|@Sleezzi %owner%|$https://sleezzi.github.io/DarkReader/website/numworks.com.css|
 ! Google website
 #Google|+google.*|@Sleezzi %owner%|$https://sleezzi.github.io/DarkReader/website/google.*.css|
+#YouTube|+youtube.*|@Sleezzi %owner%|$https://sleezzi.github.io/DarkReader/website/youtube.*.css|
 #Google Calendar|+calendar.google.*|@Lekrkoekj|$https://sleezzi.github.io/DarkReader/website/calendar.google.*.css|
 #GMail|+mail.google.*|@Globex Designs, Inc.|$https://sleezzi.github.io/DarkReader/website/mail.google.*.css|
 #Google Classroom|+classroom.google.*|@Lekrkoekj|$https://sleezzi.github.io/DarkReader/website/classroom.google.*.css|
@@ -22,7 +23,6 @@
 #VoirAnime|+v*.voiranime.com|@Sleezzi %owner%|$https://sleezzi.github.io/DarkReader/website/v*.voiranime.com.css|
 #OpenAI|+*openai.com|@Sleezzi %owner%|$https://sleezzi.github.io/DarkReader/website/openai.com.css|
 #Roblox|+roblox.com|@Sleezzi %owner%|$https://sleezzi.github.io/DarkReader/website/roblox.com.css|
-#YouTube|+youtube.*|@Sleezzi %owner%|$https://sleezzi.github.io/DarkReader/website/youtube.*.css|
 #Spotify|+open.spotify.*|@Sleezzi %owner%|$https://sleezzi.github.io/DarkReader/website/spotify.*.css|
 #Amazon (BETA)|+amazon.*|@sleepin|$https://sleezzi.github.io/DarkReader/website/amazon.*.css|
 ! Wikipedia
