@@ -16,7 +16,8 @@
 ! Name: #NAME|
 ! Supported site: +WEBSITE.COM|
 ! The author of the style: @YOURNAME|
-! The style URL (please give the same name to the style as to style.css): $URL.COM/STYLE.CSS|
+! The style URL (please give the same name to the style as to style.css): $https://exemple.com/style.css|
+! ---------------------------------------- [?] -------------------------------------------- !
 
 ! /‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾\ !
 !                 ⚠︎ Don't put "%owner" or "%verified%" in the author name ⚠︎
