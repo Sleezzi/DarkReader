@@ -5,16 +5,16 @@ const website = clearURL(window.location.hostname);
 chrome.runtime.onMessage.addListener(function (message, sender, sendResponse) {
     if (`${message}` === "disable") {
         document.querySelectorAll("#DarkReaderStyle").forEach(element => {
-            if (element.tagName === "style") {
-                element.type = "text";
+            if (element.nodeName === "STYLE") {
+                element.setAttribute("type", "text");
             } else element.rel = "text";
         });
         document.querySelector("DarkReaderDiv").style.display = "none";
     }
     if (`${message}` === "enable") {
         document.querySelectorAll("#DarkReaderStyle").forEach(element => {
-            if (element.tagName === "style") {
-                element.removeAttribute(type);
+            if (element.nodeName === "STYLE") {
+                element.removeAttribute("type");
             } else element.rel = "stylesheet";
         });
         document.querySelector("DarkReaderDiv").style.display = "block";
