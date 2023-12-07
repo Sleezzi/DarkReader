@@ -8,10 +8,23 @@
 ! GitHub issues: https://github.com/Sleezzi/DarkReader/issues
 ! GitHub pull requests: https://github.com/Sleezzi/DarkReader/pulls
 
-! School website
-#ENT - Ile de France|+*iledefrance.fr|@Sleezzi %owner%|$https://sleezzi.github.io/DarkReader/website/iledefrance.fr.css|
-#Pronote|+*index-education.net|@Sleezzi %owner%|$https://sleezzi.github.io/DarkReader/website/index-education.net.css|
-#Numworks|+numworks.com|@Sleezzi %owner%|$https://sleezzi.github.io/DarkReader/website/numworks.com.css|
+! ----------------------------------- [?] HELP [?] ---------------------------------------- !
+! Your elements must not contain "#+@$|"
+! Put "*" to represent an unknown element.
+! Put a "!" at the beginning of the line to make a comment (DarkReader will ignore this line)
+! Exemple:
+! Name: #NAME|
+! Supported site: +WEBSITE.COM|
+! The author of the style: @YOURNAME|
+! The style URL (please give the same name to the style as to style.css): $URL.COM/STYLE.CSS|
+
+! /‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾\ !
+!                 ⚠︎ Don't put "%owner" or "%verified%" in the author name ⚠︎
+! \_______________________________________________________________________________________/ !
+
+
+
+! /‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾\ Style Part /‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾\ !
 ! Google website
 #Google|+google.*|@Sleezzi %owner%|$https://sleezzi.github.io/DarkReader/website/google.*.css|
 #YouTube|+youtube.*|@Sleezzi %owner%|$https://sleezzi.github.io/DarkReader/website/youtube.*.css|
@@ -19,6 +32,9 @@
 #GMail|+mail.google.*|@Globex Designs, Inc.|$https://sleezzi.github.io/DarkReader/website/mail.google.*.css|
 #Google Classroom|+classroom.google.*|@Lekrkoekj|$https://sleezzi.github.io/DarkReader/website/classroom.google.*.css|
 ! Other
+#ENT - Ile de France|+*iledefrance.fr|@Sleezzi %owner%|$https://sleezzi.github.io/DarkReader/website/iledefrance.fr.css|
+#Pronote|+*index-education.net|@Sleezzi %owner%|$https://sleezzi.github.io/DarkReader/website/index-education.net.css|
+#Numworks|+numworks.*|@Sleezzi %owner%|$https://sleezzi.github.io/DarkReader/website/numworks.com.css|
 #Atlassian|+*.atlassian.net|@Robert Parker|$https://sleezzi.github.io/DarkReader/website/*.atlassian.net.css|
 #VoirAnime|+v*.voiranime.com|@Sleezzi %owner%|$https://sleezzi.github.io/DarkReader/website/v*.voiranime.com.css|
 #OpenAI|+*openai.com|@Sleezzi %owner%|$https://sleezzi.github.io/DarkReader/website/openai.com.css|
