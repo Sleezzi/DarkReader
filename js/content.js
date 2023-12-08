@@ -104,7 +104,7 @@ function useDefault() {
     style.id = "DarkReaderStyle";
     if (!isActive) style.type = "text";
     style.innerHTML = `
-body, main, #main, #container-main, #main-frame, div[data-role="main"], div[role="main"], div#page, div[data-role="page"], div[role="page"] {
+body, main, #main, #container-main, #main-frame, div[data-role="main"], div[role="main"], div#page, div[data-role="page"], div[role="page"], div#root {
     background: #333 !important;
     color: white !important;
 }
