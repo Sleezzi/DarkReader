@@ -86,7 +86,7 @@ function clearURL(url) {
                     const name = line.match(/\#(.*?)\|/);
                     const author = line.match(/\@(.*?)\|/);
                     if (!url || !url[1] ||
-                    !RegExp(`^${url[1].replace(/\./g, "\\.").replace(/\*/g, ".*")}$`).test(clearURL(new URL(tabs[0].url).hostname)) ||
+                    !RegExp(`^${url[1].replace(/\./g, "\\.").replace(/\*/g, ".*")}$`).test(clearURL(new URL(tabs[0].url).host)) ||
                     !name || !name[1] ||
                     !author || !author[1] ||
                     !style || !style[1]) continue;
@@ -96,10 +96,10 @@ function clearURL(url) {
                     finded = true;
                     break;
                 }
-                response = await chrome.runtime.sendMessage(`isInWhiteList$website=${clearURL(new URL(tabs[0].url).hostname)}`);
+                response = await chrome.runtime.sendMessage(`isInWhiteList$website=${clearURL(new URL(tabs[0].url).host)}`);
                 if (response !== "Yes") document.querySelector("#active > input").setAttribute("checked", true);
                 if (!finded) {
-                    document.querySelector("label#name").innerHTML = `${chrome.i18n.getMessage("popup_website")}: ${clearURL(new URL(tabs[0].url).hostname)}`;
+                    document.querySelector("label#name").innerHTML = `${chrome.i18n.getMessage("popup_website")}: ${clearURL(new URL(tabs[0].url).host)}`;
                     document.querySelector("label#author").innerHTML = `${chrome.i18n.getMessage("popup_style_author")}: <b>Sleezzi</b> <span aria-label=\"Made by the Owner\" class=\"owner\">✓</span>`;
                     document.querySelector("label#type").innerHTML = `${chrome.i18n.getMessage("popup_type")}: ${chrome.i18n.getMessage("popup_auto")}`;
                     response = await chrome.runtime.sendMessage(`getCustomOnly`);
@@ -107,7 +107,7 @@ function clearURL(url) {
                 } else console.log(finded);
                 // Set ON/OFF
                 document.getElementById("active").onmouseup = async function() {
-                    response = await chrome.runtime.sendMessage(`addWebsiteToWhiteList$website=${clearURL(new URL(tabs[0].url).hostname)}`);
+                    response = await chrome.runtime.sendMessage(`addWebsiteToWhiteList$website=${clearURL(new URL(tabs[0].url).host)}`);
                     if (response === "Yes") {
                         document.querySelector("#active > input").checked = true;
                     } else {

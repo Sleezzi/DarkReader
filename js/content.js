@@ -1,6 +1,6 @@
 let response;
 let isActive = true;
-const website = clearURL(window.location.hostname);
+const website = clearURL(window.location.host);
 
 chrome.runtime.onMessage.addListener(function (message, sender, sendResponse) {
     if (`${message}` === "disable") {

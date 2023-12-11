@@ -130,7 +130,7 @@ const changeIconOnTabUpdate = async function(activeInfo) {
 	const tab = await chrome.tabs.get(tabId);
 	if (!/^(https?|ftp):\/\/([^\s/$.?#].[^\s]*)$/.test(tab.url)) return chrome.action.setIcon({ tabId, path: '/img/icon/LogoDisable.png' });
 	settings.whitelist.forEach(url => {
-		if (whitelisted !== false && RegExp(`^${url.replace(/\./g, "\\.").replace(/\*/g, ".*").replace("@@", "")}$`).test(clearURL(new URL(`${tab.url}`).hostname))) {
+		if (whitelisted !== false && RegExp(`^${url.replace(/\./g, "\\.").replace(/\*/g, ".*").replace("@@", "")}$`).test(clearURL(new URL(`${tab.url}`).host))) {
 			if (url.startsWith("@@")) {
 				return whitelisted = false;
 			} else {
@@ -155,7 +155,7 @@ chrome.commands.onCommand.addListener(async command => {
 	if (command === "toggle_enable") {
 		const [tab] = await chrome.tabs.query({ active: true, lastFocusedWindow: true });
 		if (!tab || !tab.id) return;
-		addURLInWhitlist(clearURL(new URL(tab.url).hostname), function(resp) {
+		addURLInWhitlist(clearURL(new URL(tab.url).host), function(resp) {
 			const tabId = tab.id;
 			if (resp === "No") {
 				chrome.action.setIcon({ tabId, path: '/img/icon/LogoDisable.png' });
