@@ -31,6 +31,10 @@ h1.ytd-watch-metadata > yt-formatted-string.ytd-watch-metadata > a {
 	color: #999 !important;
 }
 
+yt-notification-action-renderer > tp-yt-paper-toast {
+  background: #999 !important;
+}
+
 .yt-spec-button-shape-next.yt-spec-button-shape-next--outline.yt-spec-button-shape-next--call-to-action.yt-spec-button-shape-next--size-m {
   background: #555 !important;
   color: white !important;
