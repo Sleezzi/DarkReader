@@ -24,11 +24,12 @@
 !|                ⚠︎ Don't put "%owner" or "%verified%" in the author name ⚠︎                |!
 !|                    ⚠︎ Don't touch the other work without permission ⚠︎                    |!
 !|                             ⚠ Please report any problems ⚠                              |!
+!|                  ⚠ Do not use any symbol other than * and . in urls ⚠                   |!
 ! \_______________________________________________________________________________________/ !
 
 
 
-! /‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾\ Style Part /‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾\ !
+! /‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾\ Styles Part /‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾\ !
 ! ---------------------------------| Google website |-------------------------------------- !
 #Google|+google.*|@Sleezzi %owner%|$https://sleezzi.github.io/DarkReader/website/google.*.css|
 #YouTube|+youtube.*|@Sleezzi %owner%|$https://sleezzi.github.io/DarkReader/website/youtube.*.css|
