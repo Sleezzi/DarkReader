@@ -27,7 +27,7 @@
     <ul>
         <li>Go on "chrome://extensions"</li>
         <li>
-            <label style="display: flex; align-items: center;">Active "Developper mode" on the top corner right of the page.</label>
+            <label style="display: flex; align-items: center;">Enable the "Developper mode" on the top corner right of the page.</label>
         </li>
         <li>
             <label style="display: flex; align-items: center;">Press "Load extension unpackaged" on the top corner left of the page and and select the folder install a little earlier.</label>
