@@ -30,7 +30,7 @@
             <label style="display: flex; align-items: center;">Enable the "Developper mode" on the top corner right of the page.</label>
         </li>
         <li>
-            <label style="display: flex; align-items: center;">Press "Load extension unpackaged" on the top corner left of the page and and select the folder install a little earlier.</label>
+            <label style="display: flex; align-items: center;">Press "Load extension unpackaged" on the top corner left of the page and and select the folder install a little earlier. You can disable the developper mode if you want.</label>
         </li>
     </ul>
 </section>
