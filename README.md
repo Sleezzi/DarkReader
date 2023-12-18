@@ -13,10 +13,10 @@
             <li><h5>By GitHub</h5></li>
             <ul>
                 <li>
-                    <label style="display: flex; align-items: center;">Press <img style="margin: 5px; height: 25px;" src="./img/readme/codeButton.png"> on the top corner right of the page</label>
+                    <label style="display: flex; align-items: center;">Press <img style="margin: 5px; height: 25px;" src="/img/readme/codeButton.png"> on the top corner right of the page</label>
                 </li>
                 <li>
-                    <label style="display: flex; align-items: center;">Press <img style="margin: 5px; height: 25px;" src="./img/readme/downloadZIP.png"> 
+                    <label style="display: flex; align-items: center;">Press <img style="margin: 5px; height: 25px;" src="/img/readme/downloadZIP.png"> 
                     in the menu that opened</label>
                 </li>
                 <li>Unzip the zip flie</li>
