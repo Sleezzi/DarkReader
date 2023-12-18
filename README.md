@@ -6,7 +6,7 @@
 <section id="Download">
     <h3>Download</h3>
     <ul>
-        <li><h4>Download the project</h4></li>
+        <li><h4>Download the extension</h4></li>
         <ul>
             <li><h5>By Git Bash</h5></li>
             <pre>$ git clone -b Extension https://github.com/Sleezzi/DarkReader.git</pre>
