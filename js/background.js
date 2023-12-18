@@ -110,7 +110,6 @@ chrome.runtime.onMessage.addListener(function (message, sender, sendResponse) {
 		chrome.storage.local.set({ "settings": settings });
 		return;
 	}
-	console.log(`${message}`);
 });
 
 chrome.runtime.onInstalled.addListener(async ({ reason }) => {
@@ -131,7 +130,6 @@ const changeIconOnTabUpdate = async function(activeInfo) {
 	if (!/^(https?|ftp):\/\/([^\s/$.?#].[^\s]*)$/.test(tab.url) ||
 	/^https:\/\/sleezzi\.github\.io.*/.test(tab.url) ||
 	/^https:\/\/chromewebstore\.google\.com.*/.test(tab.url)) return chrome.action.setIcon({ tabId, path: '/img/icon/LogoDisable.png' });
-	console.log(tab.url);
 	settings.whitelist.forEach(url => {
 		if (whitelisted !== false && RegExp(`^${url.replace(/\./g, "\\.").replace(/\*/g, ".*").replace("@@", "")}$`).test(clearURL(new URL(`${tab.url}`).host))) {
 			if (url.startsWith("@@")) {

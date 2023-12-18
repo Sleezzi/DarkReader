@@ -69,7 +69,7 @@ function clearURL(url) {
                     document.querySelector("#customOnly > input").checked = true;
                 } else {
                     document.querySelector("#customOnly > input").removeAttribute("checked");
-                } console.log(response);
+                }
             }
         } else {
             chrome.tabs.query({ active: true, currentWindow: true }, async tabs => {
@@ -104,7 +104,7 @@ function clearURL(url) {
                     document.querySelector("label#type").innerHTML = `${chrome.i18n.getMessage("popup_type")}: ${chrome.i18n.getMessage("popup_auto")}`;
                     response = await chrome.runtime.sendMessage(`getCustomOnly`);
                     if (response === "Yes") document.querySelector("#active > input").removeAttribute("checked");
-                } else console.log(finded);
+                }
                 // Set ON/OFF
                 document.getElementById("active").onmouseup = async function() {
                     response = await chrome.runtime.sendMessage(`addWebsiteToWhiteList$website=${clearURL(new URL(tabs[0].url).host)}`);

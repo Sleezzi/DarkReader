@@ -86,7 +86,7 @@ function trowError(err) {
         document.querySelector('#DarkReader.popup-container').style.display = 'none';
         chrome.runtime.sendMessage(`addWebsiteToWhiteList$website=${website}`);
     }
-    console.error(err);
+    console.log(err);
 }
 
 function useDefault() {
