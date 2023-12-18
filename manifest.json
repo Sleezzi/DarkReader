@@ -1,28 +1,16 @@
 {
-  "author": "Sleezzi",
-  "background": {
-    "service_worker": "js/background.js",
-    "persitent": true
-  },
-  "commands": {
-    "toggle_enable": {
-      "description": "__MSG_extension_command__",
-      "suggested_key": {
-        "default": "Ctrl+Shift+Q",
-        "mac": "Command+Shift+Q"
-      }
-    }
-  },
   "manifest_version": 3,
   "name": "__MSG_extension_name__",
   "short_name": "__MSG_extension_short_name__",
+  "author": "Sleezzi",
   "description": "__MSG_extension_description__",
   "version": "1.0",
+  "default_locale": "en",
   "icons": {
-    "16": "./img/icon/Logo16.png",
-    "32": "./img/icon/Logo32.png",
-    "48": "./img/icon/Logo48.png",
-    "128": "./img/icon/Logo128.png"
+    "16": "/img/icon/Logo16.png",
+    "32": "/img/icon/Logo32.png",
+    "48": "/img/icon/Logo48.png",
+    "128": "/img/icon/Logo128.png"
   },
   "action": {
     "default_popup": "/popup/popup.html",
@@ -48,6 +36,19 @@
     "<all_urls>"
   ],
   "homepage_url": "https://sleezzi.github.io/DarkReader",
+  "background": {
+    "service_worker": "js/background.js",
+    "persitent": true
+  },
+  "commands": {
+    "toggle_enable": {
+      "description": "__MSG_extension_command__",
+      "suggested_key": {
+        "default": "Ctrl+Shift+Q",
+        "mac": "Command+Shift+Q"
+      }
+    }
+  },
   "content_scripts": [
     {
       "all_frames": true,
@@ -63,9 +64,8 @@
       "run_at": "document_idle"
     }
   ],
-  "default_locale": "en",
   "web_accessible_resources": [ {
     "matches": [ "\u003Call_urls>" ],
-    "resources": [ "popup/popup.html", "popup/popup.js", "popup/popup.css", "updated.html", "installed.html" ]
+    "resources": [ "/popup/popup.html", "/popup/popup.js", "/popup/popup.css", "/updated.html", "/installed.html" ]
   } ]
 }
