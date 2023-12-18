@@ -110,7 +110,7 @@ iframe body {
     response = await chrome.runtime.sendMessage(`termsIsAccepted`);
     if (response !== "Yes") return;
     if (!/^(https?|ftp):\/\/([^\s/$.?#].[^\s]*)$/.test(window.location.href)) return console.log(`DarkReader can't work on ${website}`);
-    if (/^sleezzi\.github\.io.*/.test(website)) return;
+    if (/^sleezzi\.github\.io.*/.test(website) || /^chromewebstore\.google\.com.*/.test(website)) return;
     response = await chrome.runtime.sendMessage(`isInWhiteList$website=${website}`);
     if (response === "Yes") {
         console.warn(`You have disabled DarkReader on "${website}"`, response);
