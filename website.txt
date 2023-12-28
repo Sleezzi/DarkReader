@@ -34,7 +34,7 @@
 #Google|+google.*|@Sleezzi %owner%|$https://sleezzi.github.io/DarkReader/website/google.*.css|
 #YouTube|+youtube.*|@Sleezzi %owner%|$https://sleezzi.github.io/DarkReader/website/youtube.*.css|
 #Google Calendar|+calendar.google.*|@Lekrkoekj|$https://sleezzi.github.io/DarkReader/website/calendar.google.*.css|
-#GMail|+mail.google.*|@Globex Designs, Inc.|$https://sleezzi.github.io/DarkReader/website/mail.google.*.css|
+#Gmail|+mail.google.*|@Globex Designs, Inc.|$https://sleezzi.github.io/DarkReader/website/mail.google.*.css|
 #Google Classroom|+classroom.google.*|@Lekrkoekj|$https://sleezzi.github.io/DarkReader/website/classroom.google.*.css|
 #Google Translate|+translate.google.*|@Sleezzi %owner%|$https://sleezzi.github.io/DarkReader/website/translate.google.*.css|
 ! ---------------------------------------| Other |----------------------------------------- !
