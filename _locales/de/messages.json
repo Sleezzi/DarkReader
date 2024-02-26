@@ -44,7 +44,7 @@
   },
   "popup_terms_text": {
     "description": "Der Text, um den Benutzer aufzufordern, die Datenschutzbestimmungen zu lesen",
-    "message": "Bitte lesen Sie unsere <a href=\"https://sleezzi.github.io/DarkReader/Privacy\" target=\"_blank\">Datenschutzbestimmungen</a> bevor Sie fortfahren."
+    "message": "Bitte lesen Sie unsere <a href=\"https://darkreader.sleezzi.fr/Privacy\" target=\"_blank\">Datenschutzbestimmungen</a> bevor Sie fortfahren."
   },
   "popup_terms_accept": {
     "message": "Ich akzeptiere"

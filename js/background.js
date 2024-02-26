@@ -2,7 +2,7 @@ let settings = {
 	terms: false,
 	customOnly: false,
 	currentTabId: 0,
-	whitelist: [ "sleezzi.github.io", "ext-twitch.tv" ]
+	whitelist: [ "darkreader.sleezzi.fr", "ext-twitch.tv" ]
 };
 
 chrome.storage.local.get("settings", value => {

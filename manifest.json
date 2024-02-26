@@ -31,11 +31,11 @@
   ],
   "optional_permissions": [ "management" ],
   "host_permissions": [
-    "*://*.sleezzi.github.io/*",
+    "*://*.darkreader.sleezzi.fr/*",
     "*://*.github.com/Sleezzi/*",
     "<all_urls>"
   ],
-  "homepage_url": "https://sleezzi.github.io/DarkReader",
+  "homepage_url": "https://darkreader.sleezzi.fr",
   "background": {
     "service_worker": "js/background.js",
     "persitent": true
@@ -58,7 +58,7 @@
       "run_at": "document_idle"
     },
     {
-      "matches": [ "https://sleezzi.github.io/DarkReader/*" ],
+      "matches": [ "https://darkreader.sleezzi.fr/*" ],
       "js": ["/js/DarkReaderWebsite.js"],
       "match_about_blank": true,
       "run_at": "document_idle"

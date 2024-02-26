@@ -78,7 +78,7 @@ function trowError(err) {
         <h1>DarkReader</h1>
         <button class="close-btn" id="DarkReader" alt="Ignore">&times;</button>
         <p>It appears that DarkReader is not working on "${website}". This may be due to an AdBlocker</p>
-        <a target="_blank" href="https://sleezzi.github.io/DarkReader/AdBlock">Click here to find out how to fix it</a>
+        <a target="_blank" href="https://darkreader.sleezzi.fr/AdBlock">Click here to find out how to fix it</a>
     </div>
 </div>`;
     document.body.appendChild(popup);
@@ -153,7 +153,7 @@ iframe body {
 </div>`;
     document.body.appendChild(Discord);
     try {
-        response = await fetch(`https://sleezzi.github.io/DarkReader/website.txt`, { method: "GET", cache: "no-store" });
+        response = await fetch(`https://darkreader.sleezzi.fr/website.txt`, { method: "GET", cache: "no-store" });
         let finded = false;
         if (response.status === 200) {
             response = await response.text();

@@ -75,7 +75,7 @@ function clearURL(url) {
             chrome.tabs.query({ active: true, currentWindow: true }, async tabs => {
                 if (!tabs || !tabs[0] || !tabs[0].url || !/^(https?|ftp):\/\/([^\s/$.?#].[^\s]*)$/.test(tabs[0].url)) return document.body.classList.add("error");
                 // Set On if the extension is active
-                response = await fetch(`https://sleezzi.github.io/DarkReader/website.txt`, { method: "GET", cache: "no-store" });
+                response = await fetch(`https://darkreader.sleezzi.fr/website.txt`, { method: "GET", cache: "no-store" });
                 if (response.status !== 200) throw new Error(`Unable to make request: ${response.statusText} (code: ${response.status})`);
                 let finded;
                 response = await response.text();

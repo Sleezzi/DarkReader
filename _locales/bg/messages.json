@@ -44,7 +44,7 @@
   },
   "popup_terms_text": {
     "description": "Текстът, който кара потребителя да прочете политиката за поверителност",
-    "message": "Моля, прочетете нашата <a href=\"https://sleezzi.github.io/DarkReader/Privacy\" target=\"_blank\">Политика за поверителност</a> преди да продължите."
+    "message": "Моля, прочетете нашата <a href=\"https://darkreader.sleezzi.fr/Privacy\" target=\"_blank\">Политика за поверителност</a> преди да продължите."
   },
   "popup_terms_accept": {
     "message": "Приемам"
