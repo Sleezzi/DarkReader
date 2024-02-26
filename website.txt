@@ -5,7 +5,7 @@
 ! Made by Sleezzi for DarkReader Extension
 !    Please try to make this page as beautiful as possible.
 
-! Homepage: https://sleezzi.github.io/DarkReader
+! Homepage: https://darkreader.sleezzi.fr/DarkReader
 ! GitHub issues: https://github.com/Sleezzi/DarkReader/issues
 ! GitHub pull requests: https://github.com/Sleezzi/DarkReader/pulls
 
@@ -31,24 +31,24 @@
 
 ! /‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾\ Styles Part /‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾\ !
 ! ---------------------------------| Google website |-------------------------------------- !
-#Google|+google.*|@Sleezzi %owner%|$https://sleezzi.github.io/DarkReader/website/google.*.css|
-#YouTube|+youtube.*|@Sleezzi %owner%|$https://sleezzi.github.io/DarkReader/website/youtube.*.css|
-#Google Calendar|+calendar.google.*|@Lekrkoekj|$https://sleezzi.github.io/DarkReader/website/calendar.google.*.css|
-#Gmail|+mail.google.*|@Globex Designs, Inc.|$https://sleezzi.github.io/DarkReader/website/mail.google.*.css|
-#Google Classroom|+classroom.google.*|@Lekrkoekj|$https://sleezzi.github.io/DarkReader/website/classroom.google.*.css|
-#Google Translate|+translate.google.*|@Sleezzi %owner%|$https://sleezzi.github.io/DarkReader/website/translate.google.*.css|
+#Google|+google.*|@Sleezzi %owner%|$https://darkreader.sleezzi.fr/DarkReader/website/google.*.css|
+#YouTube|+youtube.*|@Sleezzi %owner%|$https://darkreader.sleezzi.fr/DarkReader/website/youtube.*.css|
+#Google Calendar|+calendar.google.*|@Lekrkoekj|$https://darkreader.sleezzi.fr/DarkReader/website/calendar.google.*.css|
+#Gmail|+mail.google.*|@Globex Designs, Inc.|$https://darkreader.sleezzi.fr/DarkReader/website/mail.google.*.css|
+#Google Classroom|+classroom.google.*|@Lekrkoekj|$https://darkreader.sleezzi.fr/DarkReader/website/classroom.google.*.css|
+#Google Translate|+translate.google.*|@Sleezzi %owner%|$https://darkreader.sleezzi.fr/DarkReader/website/translate.google.*.css|
 ! ---------------------------------------| Other |----------------------------------------- !
-#ENT - Ile de France|+*iledefrance.fr|@Sleezzi %owner%|$https://sleezzi.github.io/DarkReader/website/iledefrance.fr.css|
-#Pronote|+*index-education.net|@Sleezzi %owner%|$https://sleezzi.github.io/DarkReader/website/index-education.net.css|
-#Numworks|+numworks.*|@Sleezzi %owner%|$https://sleezzi.github.io/DarkReader/website/numworks.com.css|
-#Atlassian|+*.atlassian.net|@Robert Parker|$https://sleezzi.github.io/DarkReader/website/*.atlassian.net.css|
-#VoirAnime|+v*.voiranime.com|@Sleezzi %owner%|$https://sleezzi.github.io/DarkReader/website/v*.voiranime.com.css|
-#OpenAI|+*openai.com|@Sleezzi %owner%|$https://sleezzi.github.io/DarkReader/website/openai.com.css|
-#Roblox|+roblox.com|@Sleezzi %owner%|$https://sleezzi.github.io/DarkReader/website/roblox.com.css|
-#Spotify|+open.spotify.*|@Sleezzi %owner%|$https://sleezzi.github.io/DarkReader/website/spotify.*.css|
-#Amazon (BETA)|+amazon.*|@sleepin|$https://sleezzi.github.io/DarkReader/website/amazon.*.css|
+#ENT - Ile de France|+*iledefrance.fr|@Sleezzi %owner%|$https://darkreader.sleezzi.fr/DarkReader/website/iledefrance.fr.css|
+#Pronote|+*index-education.net|@Sleezzi %owner%|$https://darkreader.sleezzi.fr/DarkReader/website/index-education.net.css|
+#Numworks|+numworks.*|@Sleezzi %owner%|$https://darkreader.sleezzi.fr/DarkReader/website/numworks.com.css|
+#Atlassian|+*.atlassian.net|@Robert Parker|$https://darkreader.sleezzi.fr/DarkReader/website/*.atlassian.net.css|
+#VoirAnime|+v*.voiranime.com|@Sleezzi %owner%|$https://darkreader.sleezzi.fr/DarkReader/website/v*.voiranime.com.css|
+#OpenAI|+*openai.com|@Sleezzi %owner%|$https://darkreader.sleezzi.fr/DarkReader/website/openai.com.css|
+#Roblox|+roblox.com|@Sleezzi %owner%|$https://darkreader.sleezzi.fr/DarkReader/website/roblox.com.css|
+#Spotify|+open.spotify.*|@Sleezzi %owner%|$https://darkreader.sleezzi.fr/DarkReader/website/spotify.*.css|
+#Amazon (BETA)|+amazon.*|@sleepin|$https://darkreader.sleezzi.fr/DarkReader/website/amazon.*.css|
 ! ------------------------------------| Wikipedia |---------------------------------------- !
-#Wikipedia|+*wikipedia.*|@n0x|$https://sleezzi.github.io/DarkReader/website/*wikipedia.*.css|
-#Wikipedia FR|+fr.wikipedia.*|@n0x|$https://sleezzi.github.io/DarkReader/website/fr.wikipedia.*.css|
-#Wikipedia|+m.wikipedia.*|@n0x|$https://sleezzi.github.io/DarkReader/website/m.wikipedia.*.css|
+#Wikipedia|+*wikipedia.*|@n0x|$https://darkreader.sleezzi.fr/DarkReader/website/*wikipedia.*.css|
+#Wikipedia FR|+fr.wikipedia.*|@n0x|$https://darkreader.sleezzi.fr/DarkReader/website/fr.wikipedia.*.css|
+#Wikipedia|+m.wikipedia.*|@n0x|$https://darkreader.sleezzi.fr/DarkReader/website/m.wikipedia.*.css|
 ! \_______________________________________/ END \_________________________________________/ !
