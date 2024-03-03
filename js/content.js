@@ -110,13 +110,14 @@ iframe body {
     response = await chrome.runtime.sendMessage(`termsIsAccepted`);
     if (response !== "Yes") return;
     if (!/^(https?|ftp):\/\/([^\s/$.?#].[^\s]*)$/.test(window.location.href)) return console.log(`DarkReader can't work on ${website}`);
-    if (/^sleezzi\.github\.io.*/.test(website) || /^chromewebstore\.google\.com.*/.test(website)) return;
+    if (/^sleezzi\.github\.io.*/.test(website) || /^.*sleezzi\.fr.*/.test(website) || /^chromewebstore\.google\.com.*/.test(website)) return;
     response = await chrome.runtime.sendMessage(`isInWhiteList$website=${website}`);
     if (response === "Yes") {
         console.warn(`You have disabled DarkReader on "${website}"`, response);
         isActive = false;
     }
     console.log("DarkReader was here :)");
+    document.querySelector("body").style.transition = "background .3s cubic-bezier(0, 1, 1, 1)"
     const Discord = document.createElement("DarkReaderDiv");
     Discord.innerHTML = `
 <style>
