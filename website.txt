@@ -47,6 +47,7 @@
 #Roblox|+roblox.com|@Sleezzi %owner%|$https://darkreader.sleezzi.fr/website/roblox.com.css|
 #Spotify|+open.spotify.*|@Sleezzi %owner%|$https://darkreader.sleezzi.fr/website/spotify.*.css|
 #Amazon (BETA)|+amazon.*|@sleepin|$https://darkreader.sleezzi.fr/website/amazon.*.css|
+#Stackoverflow|+stackoverflox.*|@tekami|$https://darkreader.sleezzi.fr/website/stackoverflow.com.css|
 ! ------------------------------------| Wikipedia |---------------------------------------- !
 #Wikipedia|+*wikipedia.*|@n0x|$https://darkreader.sleezzi.fr/website/*wikipedia.*.css|
 #Wikipedia FR|+fr.wikipedia.*|@n0x|$https://darkreader.sleezzi.fr/website/fr.wikipedia.*.css|
