@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /img
+Disallow: /website
+Disallow: /AdBlock
+Disallow: /Privacy
+Disallow: /googlea6b7d173b7e1f4d6

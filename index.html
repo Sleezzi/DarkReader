@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DarkReader</title>
-    <link rel="shortcut icon" href="/DarkReader/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -12,6 +12,8 @@
             background: #333;
             animation: changeBackground 0.5s;
             margin: 0;
+            height: 100vh;
+            width: 100%;
         }
         h1 {
             color: #FFF;
@@ -41,22 +43,28 @@
         }
         .grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, 300px);
+            grid-template-columns: repeat(auto-fill, 15rem);
             height: auto;
             justify-content: center;
-            width: 100%;
-            gap: 15% 2%;
+            gap: 2rem 2rem;
         }
         .about {
-            margin: 15% 0 0 0;
+            margin: 5rem 0 0 0;
+            width: 100%;
+            padding-bottom: 3rem;
         }
         .container {
-            height: 100%;
+            height: 7rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
             width: 100%;
-            border-radius: 2vh;
+            border-radius: 1rem;
             background: #777;
             box-shadow: 2px 2px 2px 2px gray;
             transition: scale .5s;
+            overflow: hidden;
         }
         .container:hover {
             transform: scale(1.025);
@@ -106,31 +114,28 @@
     <div>
         <h1>DarkReader</h1>
         <p style="margin: 50px;">Change web pages to be dark.</p>
-        <a id="install" target="_blank" href="./DarkReader.zip">Download</a>
+        <a id="install" target="_blank" href="/DarkReader.zip">Download</a>
     </div>
     <div class="about grid">
     </div>
     <script>
         (async () => {
-            let resp = await fetch("/DarkReader/website.json", { method: "GET", cache: "no-store" });
-            if (resp.status !== 200) return;
-            resp = await resp.json();
-            for (website in resp) {
-                if (resp[website] && resp[website].name && resp[website].website && resp[website].icon && resp[website].author) {
-                    const element = document.createElement("a");
-                    element.classList.add("container");
-                    element.href = `https://${resp[website].website}`;
-                    element.target = "_blank";
-                    element.innerHTML = `
-<div style="height: 75%;width: 100%; display: flex; justify-content: center; align-items: center;">
-    <img style="height: 90%;width: 90%;" src="${resp[website].icon}" alt="${resp[website].name}">
-</div>
-<div style="height: 25%; width: 100%;">
-    <h3>${resp[website].name}</h3>
-    <p>Made by: <b>${resp[website].author.replaceAll("%verified%", "</b><span aria-label=\"Verified user\" class=\"verified\">✓</span><b>").replaceAll("%owner%", "</b><span aria-label=\"Made by the Owner\" class=\"owner\">✓</span><b>").replaceAll("&", "</b>&<b>")}</b></p>
-</div>`;
-                    document.querySelector(".about").appendChild(element);
-                }
+            let response = await fetch("/website.txt", { method: "GET" });
+            if (response.status !== 200) return;
+            response = await response.text();
+            for (const line of response.split('\n')) {
+                if (line.trim() === '' || line.trim().startsWith('!')) continue;
+                const url = line.match(/\+(.*?)\|/);
+                const styleURL = line.match(/\$(.*?)\|/);
+                const name = line.match(/\#(.*?)\|/);
+                const author = line.match(/\@(.*?)\|/);
+                if (!name || !name[1] || !author || !author[1]) continue;
+                const element = document.createElement("div");
+                element.classList.add("container");
+                element.innerHTML = `
+<h3>${name[1]}</h3>
+<p>Made by: <b>${author[1].replaceAll("%verified%", "</b><span aria-label=\"Verified user\" class=\"verified\">✓</span><b>").replaceAll("%owner%", "</b><span aria-label=\"Made by the Owner\" class=\"owner\">✓</span><b>").replaceAll("&", "</b>&<b>")}</b></p>`;
+                document.querySelector(".about").appendChild(element);
             }
         })();
     </script>
