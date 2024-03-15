@@ -1,0 +1,31 @@
+:root {
+    --background: #333;
+    --color: #FFF;
+    --alt-background: #555;
+    --alt-color: var(--color);
+    --alt-background-2: #888;
+    --alt-color-2: var(--color);
+}
+  
+.OoO4Vb {
+    background: var(--background) !important;
+    color: var(--alt-color-2) !important;
+}
+header, .umT6Nc, .cK8COe, .rZqBPb, .sVgexf > div, .Dyghnf, .VfPpkd-WsjYwc, .EQH32, 
+.eGqruc, .CtOYUe, .RK5YRd, .BEC6H {
+    background: var(--alt-background) !important;
+    color: var(--alt-color) !important;
+}
+.npD1Gc, .f1SRCe > *, a.Lhhaec > * > span, .NL3Fie, .SaG06d {
+    color: var(--alt-color-2) !important;
+}
+.npD1Gc, .f1SRCe > *, a.Lhhaec svg, a.Lhhaec:hover > * > span, .F93BIf:hover span {
+    color: var(--alt-color);
+}
+.enPWWe, .MpcEge, div[role="button"], .cp8g2d:hover, .F93BIf:hover {
+    background: var(--alt-background-2) !important;
+    color: var(--alt-color-2) !important;
+}
+.Lhhaec[aria-selected="true"] > * > span {
+    color: unset !important;
+}

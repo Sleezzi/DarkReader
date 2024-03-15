@@ -37,6 +37,7 @@
 #Gmail|+mail.google.*|@Globex Designs, Inc.|$https://darkreader.sleezzi.fr/website/mail.google.*.css|
 #Google Classroom|+classroom.google.*|@Lekrkoekj|$https://darkreader.sleezzi.fr/website/classroom.google.*.css|
 #Google Translate|+translate.google.*|@Sleezzi %owner%|$https://darkreader.sleezzi.fr/website/translate.google.*.css|
+#Google Search Console|+search.google.*|@Sleezzi %owner%|$https://darkreader.sleezzi.fr/website/search.google.*.css|
 ! ---------------------------------------| Other |----------------------------------------- !
 #ENT - Ile de France|+*iledefrance.fr|@Sleezzi %owner%|$https://darkreader.sleezzi.fr/website/iledefrance.fr.css|
 #Pronote|+*index-education.net|@Sleezzi %owner%|$https://darkreader.sleezzi.fr/website/index-education.net.css|
